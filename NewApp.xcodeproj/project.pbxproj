@@ -23,6 +23,8 @@
 		BE9D03191A418C6E007635B0 /* stock.json in Resources */ = {isa = PBXBuildFile; fileRef = BE9D03181A418C6E007635B0 /* stock.json */; };
 		BE9D031C1A418CEA007635B0 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D031B1A418CEA007635B0 /* CoreData.swift */; };
 		BE9D031E1A418DA0007635B0 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D031D1A418DA0007635B0 /* RestService.swift */; };
+		BE9D03201A41AA74007635B0 /* portfolios.json in Resources */ = {isa = PBXBuildFile; fileRef = BE9D031F1A41AA74007635B0 /* portfolios.json */; };
+		BE9D03241A41ACD1007635B0 /* Portfilios.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D03231A41ACD1007635B0 /* Portfilios.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		BE9D03181A418C6E007635B0 /* stock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock.json; sourceTree = "<group>"; };
 		BE9D031B1A418CEA007635B0 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		BE9D031D1A418DA0007635B0 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		BE9D031F1A41AA74007635B0 /* portfolios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = portfolios.json; sourceTree = "<group>"; };
+		BE9D03231A41ACD1007635B0 /* Portfilios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfilios.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				BE9D030F1A41745E007635B0 /* DetailViewController.swift */,
 				BE9D03131A418B5F007635B0 /* NewApp.xcdatamodeld */,
 				BE9D03161A418BC9007635B0 /* Stocks.swift */,
+				BE9D03231A41ACD1007635B0 /* Portfilios.swift */,
 			);
 			path = NewApp;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				BE0D7B3D1A415660004E0205 /* Info.plist */,
 				BE9D03181A418C6E007635B0 /* stock.json */,
 				BE9D031D1A418DA0007635B0 /* RestService.swift */,
+				BE9D031F1A41AA74007635B0 /* portfolios.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9D03201A41AA74007635B0 /* portfolios.json in Resources */,
 				BE0D7B441A415660004E0205 /* Main.storyboard in Resources */,
 				BE0D7B491A415660004E0205 /* LaunchScreen.xib in Resources */,
 				BE0D7B461A415660004E0205 /* Images.xcassets in Resources */,
@@ -257,6 +264,7 @@
 				BE9D03151A418B5F007635B0 /* NewApp.xcdatamodeld in Sources */,
 				BE9D030A1A415EBE007635B0 /* TableViewCell.swift in Sources */,
 				BE9D03171A418BC9007635B0 /* Stocks.swift in Sources */,
+				BE9D03241A41ACD1007635B0 /* Portfilios.swift in Sources */,
 				BE9D031C1A418CEA007635B0 /* CoreData.swift in Sources */,
 				BE0D7B411A415660004E0205 /* ViewController.swift in Sources */,
 				BE9D03101A41745E007635B0 /* DetailViewController.swift in Sources */,

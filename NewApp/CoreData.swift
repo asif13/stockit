@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 class ParseJson {
 var stocks:NSArray=NSArray();
+var portfolios:NSArray=NSArray();
 func fetchFromJson() -> NSArray
 {
         GetStocks().getstocks(){
@@ -17,6 +18,11 @@ func fetchFromJson() -> NSArray
             (stocks) in
             self.getstocks(stocks);
         }
+    GetStocks().getportfolios(){
+        
+        (portfolios) in
+        self.getportfolios(portfolios);
+    }
         return []
         
         
@@ -27,7 +33,12 @@ func getstocks(data:NSArray)
         self.stocks = data
         setstocks()
 }
-
+func getportfolios(data:NSArray)
+{
+        //println(data)
+        self.portfolios = data
+        setportfolios()
+}
 func setstocks()
 {   var i=0;
     for i in 0...(self.stocks.count-1)
@@ -49,6 +60,34 @@ func setstocks()
     }
     
 
+}
+func setportfolios()
+{   var i=0;
+        for i in 0...(self.portfolios.count-1)
+        {
+            println(self.portfolios[i])
+            let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            let managedContext = appDelegate.managedObjectContext!
+            let entity =  NSEntityDescription.entityForName("Portfilios",inManagedObjectContext:managedContext)
+            let newportfolio = Portfilios(entity:entity!, insertIntoManagedObjectContext: managedContext)
+            newportfolio.portfolioId = self.portfolios[i].valueForKey("id") as String
+            var stock = self.portfolios[i].valueForKey("stocks") as NSArray
+            println(stock)
+            var j=0;
+            var stockarray:[String]=[String]();
+            for j in 0...(stock.count-1)
+            {  stockarray.append(stock[j].valueForKey("id") as String);
+            }
+            println(stockarray)
+            var Data:NSData = NSKeyedArchiver.archivedDataWithRootObject(stockarray)
+            newportfolio.stocks = Data;
+            var error: NSError?
+            if !managedContext.save(&error) {
+                println("Could not save \(error), \(error?.userInfo)")
+            }
+        }
+        
+        
 }
 }
 

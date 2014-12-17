@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var stocktable: UITableView!
@@ -20,8 +20,20 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         ParseJson().fetchFromJson()
-        let jsonData:NSData = NSData.dataWithContentsOfMappedFile("/Users/adminidstrator/Desktop/NewApp/NewApp/data.json") as NSData
-         response = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        var freq=NSFetchRequest(entityName: "Stocks")
+        var mylist=managedContext.executeFetchRequest(freq, error: nil)!
+        println(mylist)
+        freq=NSFetchRequest(entityName: "Portfilios")
+        var myPortfolios=managedContext.executeFetchRequest(freq, error: nil)!
+        println(myPortfolios)
+        var response = Dictionary<String,[String]>()
+        var j=0;
+        for j in 0...(myPortfolios.count-1)
+        {   var stockarray:[String] = NSKeyedUnarchiver.unarchiveObjectWithData(myPortfolios[j].valueForKey("stocks")) as [String]
+            response[myPortfolios[j].valueForKey("portfolioId") as String] = stockarray
+        }
         stocktable.hidden=true;
     }
 

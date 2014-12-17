@@ -21,10 +21,15 @@ class GetStocks{
             callback(response)
        
     }
-    func getProjects(callback:(NSArray) -> ()){
-        request("http://resomapp.mybluemix.net/api/GET/projects", callback)
+    func getportfolios(callback:(NSArray) -> ()){
+        requestp("/Users/adminidstrator/Desktop/NewApp/NewApp/portfolios.json", callback)
     }
-    func getteam(callback:(NSArray) -> ()){
-        request("http://resomapp.mybluemix.net/api/GET/link", callback)
+    func requestp(url:String, callback:(NSArray)-> ()){
+        let jsonData:NSData = NSData.dataWithContentsOfMappedFile(url) as NSData
+        var err: NSError?
+        var response = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
+        callback(response)
+        
     }
+    
 }
