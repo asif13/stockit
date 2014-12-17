@@ -1,0 +1,49 @@
+ [
+  {
+  "id" : "one",
+  "stocks" : [
+              {
+              "name" : "stock1",
+              "lowest" : "$10",
+              "highest" : "$50",
+              "current" : "$40",
+              },
+              {
+              "name" : "stock4",
+              "lowest" : "$40",
+              "highest" : "$900",
+              "current" : "$50",
+              }
+              ]
+  },
+  {
+  "id" : "two",
+  "stocks" : [
+              {
+              "name" : "stock2",
+              "lowest" : "$40",
+              "highest" : "$60",
+              "current" : "$50",
+              },
+              {
+              "name" : "stock3",
+              "lowest" : "$190",
+              "highest" : "$200",
+              "current" : "$1950",
+              }
+              ,{
+              "name" : "stock2",
+              "lowest" : "$40",
+              "highest" : "$80",
+              "current" : "$50",
+              },
+              {
+              "name" : "stock5",
+              "lowest" : "$40",
+              "highest" : "$100",
+              "current" : "$50",
+              }
+              ]
+  }
+  
+  ]
