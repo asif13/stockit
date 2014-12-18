@@ -11,25 +11,22 @@ import Foundation
 
 class GetStocks{
     func getstocks(callback:(NSArray) -> ()){
-        request("/Users/adminidstrator/Desktop/NewApp/NewApp/stock.json", callback)
+        var stocks = CommonFunc._readLocalJson("stock") as NSArray
+        callback(stocks)
     }
 
-    func request(url:String, callback:(NSArray)-> ()){
-            let jsonData:NSData = NSData.dataWithContentsOfMappedFile(url) as NSData
-            var err: NSError?
-            var response = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
-            callback(response)
-       
-    }
+    
     func getportfolios(callback:(NSArray) -> ()){
-        requestp("/Users/adminidstrator/Desktop/NewApp/NewApp/portfolios.json", callback)
+        var portfolios = CommonFunc._readLocalJson("portfolios") as NSArray
+        callback(portfolios)
     }
-    func requestp(url:String, callback:(NSArray)-> ()){
-        let jsonData:NSData = NSData.dataWithContentsOfMappedFile(url) as NSData
-        var err: NSError?
-        var response = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
-        callback(response)
-        
-    }
+    
+//    func request(url:String, callback:(NSArray)-> ()){
+//        
+//    }
+//    
+//    func requestp(url:String, callback:(NSArray)-> ()){
+//        
+//    }
     
 }

@@ -30,11 +30,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         println(myPortfolios)
         var response = Dictionary<String,[String]>()
         var j=0;
-        for j in 0...(myPortfolios.count-1)
-        {   var stockarray:[String] = NSKeyedUnarchiver.unarchiveObjectWithData(myPortfolios[j].valueForKey("stocks")) as [String]
-            response[myPortfolios[j].valueForKey("portfolioId") as String] = stockarray
-        }
-        stocktable.hidden=true;
+//        for j in 0...(myPortfolios.count-1)
+//        {   var stockarray:[String] = NSKeyedUnarchiver.unarchiveObjectWithData(myPortfolios[j].valueForKey("stocks")) as [String]
+//            response[myPortfolios[j].valueForKey("portfolioId") as String] = stockarray
+//        }
+//        stocktable.hidden=true;
     }
 
     override func didReceiveMemoryWarning() {

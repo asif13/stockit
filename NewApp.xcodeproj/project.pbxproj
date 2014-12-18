@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25B7F72A1A42B5D0000679DD /* commonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7F7291A42B5D0000679DD /* commonFunc.swift */; };
 		BE0D7B3F1A415660004E0205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D7B3E1A415660004E0205 /* AppDelegate.swift */; };
 		BE0D7B411A415660004E0205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D7B401A415660004E0205 /* ViewController.swift */; };
 		BE0D7B441A415660004E0205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0D7B421A415660004E0205 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25B7F7291A42B5D0000679DD /* commonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonFunc.swift; sourceTree = "<group>"; };
 		BE0D7B391A415660004E0205 /* NewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0D7B3D1A415660004E0205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE0D7B3E1A415660004E0205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25B7F7281A42B5A4000679DD /* modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modules;
+			sourceTree = "<group>";
+		};
 		BE0D7B301A415660004E0205 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +112,7 @@
 		BE0D7B3B1A415660004E0205 /* NewApp */ = {
 			isa = PBXGroup;
 			children = (
+				25B7F7281A42B5A4000679DD /* modules */,
 				BE9D031A1A418CD5007635B0 /* services */,
 				BE9D03091A415EBE007635B0 /* TableViewCell.swift */,
 				BE9D030B1A41628C007635B0 /* staticTableViewCell.swift */,
@@ -153,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9D031B1A418CEA007635B0 /* CoreData.swift */,
+				25B7F7291A42B5D0000679DD /* commonFunc.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -262,6 +273,7 @@
 			files = (
 				BE9D031E1A418DA0007635B0 /* RestService.swift in Sources */,
 				BE9D03151A418B5F007635B0 /* NewApp.xcdatamodeld in Sources */,
+				25B7F72A1A42B5D0000679DD /* commonFunc.swift in Sources */,
 				BE9D030A1A415EBE007635B0 /* TableViewCell.swift in Sources */,
 				BE9D03171A418BC9007635B0 /* Stocks.swift in Sources */,
 				BE9D03241A41ACD1007635B0 /* Portfilios.swift in Sources */,

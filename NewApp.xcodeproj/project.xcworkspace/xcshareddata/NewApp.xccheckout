@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1DB6C78D-42B0-4251-BFF9-10E772203FE4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NewApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DDA81F983793DCDEDF7FCDAC42B67E120933CF0B</key>
+		<string>https://github.com/therudite/stockit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NewApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DDA81F983793DCDEDF7FCDAC42B67E120933CF0B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/therudite/stockit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DDA81F983793DCDEDF7FCDAC42B67E120933CF0B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DDA81F983793DCDEDF7FCDAC42B67E120933CF0B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>stockit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
