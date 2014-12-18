@@ -1,20 +1,18 @@
 //
-//  DetailViewController.swift
+//  addportfolioViewController.swift
 //  NewApp
 //
-//  Created by Venkatesh on 17/12/14.
+//  Created by Venkatesh on 18/12/14.
 //  Copyright (c) 2014 Administrator. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
-    var lable="";
-    @IBOutlet weak var lable1: UILabel!
-    @IBOutlet weak var navigation: UINavigationItem!
+class addportfolioViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lable1.text="one";
+
         // Do any additional setup after loading the view.
     }
 
@@ -23,11 +21,11 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func dismiss(sender: AnyObject) {
+    @IBAction func addPortfolio(sender: AnyObject) {
         self.dismissViewControllerAnimated(true , completion: nil)
 
     }
+
     /*
     // MARK: - Navigation
 

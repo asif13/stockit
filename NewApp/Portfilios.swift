@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+@objc(Portfilios)
 class Portfilios: NSManagedObject {
 
     @NSManaged var portfolioId: String

@@ -26,6 +26,8 @@
 		BE9D031E1A418DA0007635B0 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D031D1A418DA0007635B0 /* RestService.swift */; };
 		BE9D03201A41AA74007635B0 /* portfolios.json in Resources */ = {isa = PBXBuildFile; fileRef = BE9D031F1A41AA74007635B0 /* portfolios.json */; };
 		BE9D03241A41ACD1007635B0 /* Portfilios.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D03231A41ACD1007635B0 /* Portfilios.swift */; };
+		BE9D03261A430ED8007635B0 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D03251A430ED8007635B0 /* PortfolioCollectionViewCell.swift */; };
+		BE9D032C1A4312AA007635B0 /* addportfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D032B1A4312AA007635B0 /* addportfolioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		BE9D031D1A418DA0007635B0 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		BE9D031F1A41AA74007635B0 /* portfolios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = portfolios.json; sourceTree = "<group>"; };
 		BE9D03231A41ACD1007635B0 /* Portfilios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfilios.swift; sourceTree = "<group>"; };
+		BE9D03251A430ED8007635B0 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE9D032B1A4312AA007635B0 /* addportfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addportfolioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,21 +116,17 @@
 		BE0D7B3B1A415660004E0205 /* NewApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE9D032A1A43126A007635B0 /* view */,
+				BE9D03281A43121F007635B0 /* data */,
+				BE9D03291A431244007635B0 /* entities */,
+				BE9D03271A4311F3007635B0 /* controller */,
 				25B7F7281A42B5A4000679DD /* modules */,
 				BE9D031A1A418CD5007635B0 /* services */,
-				BE9D03091A415EBE007635B0 /* TableViewCell.swift */,
-				BE9D030B1A41628C007635B0 /* staticTableViewCell.swift */,
 				BE0D7B3E1A415660004E0205 /* AppDelegate.swift */,
-				BE0D7B401A415660004E0205 /* ViewController.swift */,
-				BE0D7B421A415660004E0205 /* Main.storyboard */,
 				BE0D7B451A415660004E0205 /* Images.xcassets */,
-				BE0D7B471A415660004E0205 /* LaunchScreen.xib */,
 				BE0D7B3C1A415660004E0205 /* Supporting Files */,
-				BE9D030D1A416371007635B0 /* data.json */,
-				BE9D030F1A41745E007635B0 /* DetailViewController.swift */,
 				BE9D03131A418B5F007635B0 /* NewApp.xcdatamodeld */,
-				BE9D03161A418BC9007635B0 /* Stocks.swift */,
-				BE9D03231A41ACD1007635B0 /* Portfilios.swift */,
+				BE9D032B1A4312AA007635B0 /* addportfolioViewController.swift */,
 			);
 			path = NewApp;
 			sourceTree = "<group>";
@@ -135,9 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				BE0D7B3D1A415660004E0205 /* Info.plist */,
-				BE9D03181A418C6E007635B0 /* stock.json */,
-				BE9D031D1A418DA0007635B0 /* RestService.swift */,
-				BE9D031F1A41AA74007635B0 /* portfolios.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,9 +160,50 @@
 			isa = PBXGroup;
 			children = (
 				BE9D031B1A418CEA007635B0 /* CoreData.swift */,
+				BE9D031D1A418DA0007635B0 /* RestService.swift */,
 				25B7F7291A42B5D0000679DD /* commonFunc.swift */,
 			);
 			name = services;
+			sourceTree = "<group>";
+		};
+		BE9D03271A4311F3007635B0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE9D03251A430ED8007635B0 /* PortfolioCollectionViewCell.swift */,
+				BE9D030F1A41745E007635B0 /* DetailViewController.swift */,
+				BE9D03091A415EBE007635B0 /* TableViewCell.swift */,
+				BE9D030B1A41628C007635B0 /* staticTableViewCell.swift */,
+				BE0D7B401A415660004E0205 /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		BE9D03281A43121F007635B0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				BE9D031F1A41AA74007635B0 /* portfolios.json */,
+				BE9D03181A418C6E007635B0 /* stock.json */,
+				BE9D030D1A416371007635B0 /* data.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		BE9D03291A431244007635B0 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				BE9D03161A418BC9007635B0 /* Stocks.swift */,
+				BE9D03231A41ACD1007635B0 /* Portfilios.swift */,
+			);
+			name = entities;
+			sourceTree = "<group>";
+		};
+		BE9D032A1A43126A007635B0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BE0D7B421A415660004E0205 /* Main.storyboard */,
+				BE0D7B471A415660004E0205 /* LaunchScreen.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +320,8 @@
 				BE9D03101A41745E007635B0 /* DetailViewController.swift in Sources */,
 				BE0D7B3F1A415660004E0205 /* AppDelegate.swift in Sources */,
 				BE9D030C1A41628C007635B0 /* staticTableViewCell.swift in Sources */,
+				BE9D03261A430ED8007635B0 /* PortfolioCollectionViewCell.swift in Sources */,
+				BE9D032C1A4312AA007635B0 /* addportfolioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

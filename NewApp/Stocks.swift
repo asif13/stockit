@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+@objc(Stocks)
 class Stocks: NSManagedObject {
 
     @NSManaged var stockid: String
