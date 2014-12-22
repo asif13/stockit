@@ -97,7 +97,7 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         return self.show()
         }
         else
-        {   var viewcontroller:DetailViewController = DetailViewController();
+        {   var viewcontroller:DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Details") as  DetailViewController;
             viewcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
             self.presentViewController(viewcontroller, animated: true, completion: nil)
         }
@@ -128,9 +128,13 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if(segue.identifier=="Details")
+        {
+            println("hello");
          var Details = segue.destinationViewController as DetailViewController
          var mycell:TableViewCell=sender as TableViewCell
-            Details.lable = mycell.lable.text! 
+            Details.lable = mycell.lable.text!
+        }
     }
 
 
