@@ -97,9 +97,10 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         return self.show()
         }
         else
-        {   var viewcontroller:DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Details") as  DetailViewController;
-            viewcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
-            self.presentViewController(viewcontroller, animated: true, completion: nil)
+        {   var detailcontroller:DetailViewController = DetailViewController()
+            detailcontroller.lable = "Hello";
+            detailcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
+            self.presentViewController(detailcontroller, animated: true, completion: nil)
         }
     }
     

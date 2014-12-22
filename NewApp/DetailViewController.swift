@@ -12,9 +12,10 @@ class DetailViewController: UIViewController {
     var lable="";
     @IBOutlet weak var lable1: UILabel!
     @IBOutlet weak var navigation: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title="hello";
+        self.navigationItem.title=lable;
         // Do any additional setup after loading the view.
     }
 
