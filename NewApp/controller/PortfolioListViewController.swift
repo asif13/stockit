@@ -103,6 +103,9 @@ class PortfolioListViewController: UIViewController, UITableViewDataSource, UITa
             var stks = CoreDataOps().getAllStocksForPortfolio(displayData[self.selectedIndex])
             if stks.count > 0 {
                 displayData.removeAll()
+                for i in stks {
+                    displayData.append(i.name)
+                }
             }
         }
         
