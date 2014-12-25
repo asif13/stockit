@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate, UITableViewDelegate {
+class PortfolioListViewController: UIViewController,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate, UITableViewDelegate {
     
     @IBOutlet weak var tabletopbutton: UIButton!
     @IBOutlet weak var portfoliotitle: UILabel!
@@ -42,7 +42,7 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         println(response)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -65,7 +65,7 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         
         cell.lable.text = toString((arr[indexPath.row]))
         return cell
-       
+        
     }
     
     func show()
@@ -76,16 +76,16 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         arr.removeAll();
         for j in 0...(stockarray.count-1)
         {println(mystocks.count)
-        var i=0;
-        for i in 0...(mystocks.count-1)
-        {       if(mystocks[i].valueForKey("stockid") as String == stockarray[j])
-                {println(mystocks[i].valueForKey("stockid"))
-                    println(stockarray[j])
-                    var name:String = mystocks[i].valueForKey("name") as String
-                    arr.append(name)
-                    ibtableview.reloadData();
+            var i=0;
+            for i in 0...(mystocks.count-1)
+            {       if(mystocks[i].valueForKey("stockid") as String == stockarray[j])
+            {println(mystocks[i].valueForKey("stockid"))
+                println(stockarray[j])
+                var name:String = mystocks[i].valueForKey("name") as String
+                arr.append(name)
+                ibtableview.reloadData();
                 }
-        }
+            }
         }
         tabletopbutton.hidden=false;
     }
@@ -93,11 +93,11 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         
         if(portfoliotitle.text=="Portfolios")
         {
-        selectedIndex = indexPath.row
-        return self.show()
+            selectedIndex = indexPath.row
+            return self.show()
         }
         else
-        {   var detailcontroller:DetailViewController = DetailViewController()
+        {   var detailcontroller:StockDetailsViewController = StockDetailsViewController()
             detailcontroller.lable = "Hello";
             detailcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
             self.presentViewController(detailcontroller, animated: true, completion: nil)
@@ -112,7 +112,7 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
             ibtableview.reloadData()
         }
         portfoliotitle.text="Portfolios";
-         tabletopbutton.hidden=true;
+        tabletopbutton.hidden=true;
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return myPortfolios.count;
@@ -132,12 +132,12 @@ class ViewController: UIViewController,UITableViewDataSource,UICollectionViewDat
         if(segue.identifier=="Details")
         {
             println("hello");
-         var Details = segue.destinationViewController as DetailViewController
-         var mycell:TableViewCell=sender as TableViewCell
+            var Details = segue.destinationViewController as StockDetailsViewController
+            var mycell:TableViewCell=sender as TableViewCell
             Details.lable = mycell.lable.text!
         }
     }
-
-
+    
+    
 }
 

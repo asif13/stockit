@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Portfolio List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PortfolioListViewController" customModule="NewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XjM-wE-f1R"/>
                         <viewControllerLayoutGuide type="bottom" id="YdV-2j-vGE"/>
@@ -83,7 +83,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="354" height="228"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-te-Jqq">
@@ -156,12 +156,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="-56"/>
+            <point key="canvasLocation" x="55.5" y="-63"/>
         </scene>
-        <!--Addportfolio View Controller-->
+        <!--Add Portfolio View Controller-->
         <scene sceneID="CeQ-a4-tT9">
             <objects>
-                <viewController modalPresentationStyle="formSheet" id="1Cb-iw-VA5" customClass="addportfolioViewController" customModule="NewApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="1Cb-iw-VA5" customClass="AddPortfolioViewController" customModule="NewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="73Z-lV-Clx"/>
                         <viewControllerLayoutGuide type="bottom" id="7iq-8b-qjx"/>
@@ -213,7 +213,7 @@
         <!--DetailViewController-->
         <scene sceneID="0XP-pp-7QE">
             <objects>
-                <viewController title="DetailViewController" modalPresentationStyle="pageSheet" id="RD3-qI-ZZS" customClass="DetailViewController" customModule="NewApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DetailViewController" modalPresentationStyle="pageSheet" id="RD3-qI-ZZS" customClass="StockDetailsViewController" customModule="NewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CQc-ZX-WrP"/>
                         <viewControllerLayoutGuide type="bottom" id="2Wq-Q6-pEw"/>
@@ -261,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3X3-up-Uqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="-140"/>
+            <point key="canvasLocation" x="1212" y="75"/>
         </scene>
     </scenes>
 </document>
