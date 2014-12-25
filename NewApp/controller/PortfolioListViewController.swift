@@ -16,7 +16,7 @@ class PortfolioListViewController: UIViewController,UITableViewDataSource,UIColl
     @IBOutlet weak var ibtableview: UITableView!
     var arr=["one","two"];
     var response = Dictionary<String,[String]>()
-    var mystocks:[Stocks] = [Stocks]();
+    var mystocks:[Stock] = [Stock]();
     var selectedIndex:Int=Int();
     var myPortfolios:NSArray=NSArray();
     override func viewDidLoad() {
@@ -27,15 +27,15 @@ class PortfolioListViewController: UIViewController,UITableViewDataSource,UIColl
         portfoliotitle.text="Portfolios";
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let managedContext = appDelegate.managedObjectContext!
-        var freq=NSFetchRequest(entityName: "Stocks")
+        var freq=NSFetchRequest(entityName: "Stock")
         var mystock=managedContext.executeFetchRequest(freq, error: nil)!
-        mystocks = mystock as [Stocks];
-        freq=NSFetchRequest(entityName: "Portfilios")
+        mystocks = mystock as [Stock];
+        freq=NSFetchRequest(entityName: "Portfolio")
         myPortfolios = managedContext.executeFetchRequest(freq, error: nil)!
         println(myPortfolios.count)
         var j=0;
-        for j in 0...(myPortfolios.count-1)
-        {   println(myPortfolios[j].valueForKey("portfolioId"))
+        for var j=0; j<(myPortfolios.count); ++j {
+            println(myPortfolios[j].valueForKey("portfolioId"))
             var stockarray:[String] = NSKeyedUnarchiver.unarchiveObjectWithData(myPortfolios[j].valueForKey("stocks") as NSData) as [String]
             response[myPortfolios[j].valueForKey("portfolioId") as String] = stockarray
         }

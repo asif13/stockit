@@ -13,9 +13,6 @@
 		257FA6C61A4B477200A04218 /* NewApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6AB1A4B477200A04218 /* NewApp.xcdatamodeld */; };
 		257FA6C71A4B477200A04218 /* portfolios.json in Resources */ = {isa = PBXBuildFile; fileRef = 257FA6AD1A4B477200A04218 /* portfolios.json */; };
 		257FA6C81A4B477200A04218 /* stock.json in Resources */ = {isa = PBXBuildFile; fileRef = 257FA6AE1A4B477200A04218 /* stock.json */; };
-		257FA6C91A4B477200A04218 /* Portfilios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6B21A4B477200A04218 /* Portfilios.swift */; };
-		257FA6CA1A4B477200A04218 /* Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6B31A4B477200A04218 /* Stocks.swift */; };
-		257FA6CB1A4B477200A04218 /* commonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6B51A4B477200A04218 /* commonFunc.swift */; };
 		257FA6CC1A4B477200A04218 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6B61A4B477200A04218 /* CoreData.swift */; };
 		257FA6CD1A4B477200A04218 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6B71A4B477200A04218 /* RestService.swift */; };
 		257FA6CE1A4B477200A04218 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257FA6BA1A4B477200A04218 /* LaunchScreen.xib */; };
@@ -25,6 +22,12 @@
 		257FA6D51A4BF86C00A04218 /* StockDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6D41A4BF86C00A04218 /* StockDetailsViewController.swift */; };
 		257FA6D71A4BF96100A04218 /* PortfolioListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6D61A4BF96100A04218 /* PortfolioListViewController.swift */; };
 		257FA6D91A4BFA3F00A04218 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6D81A4BFA3F00A04218 /* AddPortfolioViewController.swift */; };
+		257FA6DB1A4C117400A04218 /* PortfolioAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6DA1A4C117400A04218 /* PortfolioAdapter.swift */; };
+		257FA6DD1A4C118600A04218 /* StockAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6DC1A4C118600A04218 /* StockAdapter.swift */; };
+		257FA6DF1A4C122D00A04218 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6DE1A4C122D00A04218 /* Stock.swift */; };
+		257FA6E11A4C128400A04218 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6E01A4C128400A04218 /* Portfolio.swift */; };
+		257FA6E31A4C132C00A04218 /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257FA6E21A4C132C00A04218 /* BaseAdapter.swift */; };
+		25D5077C1A4C32A500B233F3 /* CommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D5077B1A4C32A500B233F3 /* CommonFunc.swift */; };
 		BE0D7B461A415660004E0205 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0D7B451A415660004E0205 /* Images.xcassets */; };
 		BE0D7B551A415661004E0205 /* NewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D7B541A415661004E0205 /* NewAppTests.swift */; };
 		BE9D03121A418ADB007635B0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9D03111A418ADB007635B0 /* CoreData.framework */; };
@@ -47,9 +50,6 @@
 		257FA6AC1A4B477200A04218 /* NewApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewApp.xcdatamodel; sourceTree = "<group>"; };
 		257FA6AD1A4B477200A04218 /* portfolios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = portfolios.json; sourceTree = "<group>"; };
 		257FA6AE1A4B477200A04218 /* stock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock.json; sourceTree = "<group>"; };
-		257FA6B21A4B477200A04218 /* Portfilios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfilios.swift; sourceTree = "<group>"; };
-		257FA6B31A4B477200A04218 /* Stocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stocks.swift; sourceTree = "<group>"; };
-		257FA6B51A4B477200A04218 /* commonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonFunc.swift; sourceTree = "<group>"; };
 		257FA6B61A4B477200A04218 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		257FA6B71A4B477200A04218 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		257FA6BB1A4B477200A04218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -59,6 +59,12 @@
 		257FA6D41A4BF86C00A04218 /* StockDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailsViewController.swift; sourceTree = "<group>"; };
 		257FA6D61A4BF96100A04218 /* PortfolioListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioListViewController.swift; sourceTree = "<group>"; };
 		257FA6D81A4BFA3F00A04218 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
+		257FA6DA1A4C117400A04218 /* PortfolioAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioAdapter.swift; sourceTree = "<group>"; };
+		257FA6DC1A4C118600A04218 /* StockAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockAdapter.swift; sourceTree = "<group>"; };
+		257FA6DE1A4C122D00A04218 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		257FA6E01A4C128400A04218 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		257FA6E21A4C132C00A04218 /* BaseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAdapter.swift; sourceTree = "<group>"; };
+		25D5077B1A4C32A500B233F3 /* CommonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunc.swift; sourceTree = "<group>"; };
 		BE0D7B391A415660004E0205 /* NewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0D7B3D1A415660004E0205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE0D7B451A415660004E0205 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 		257FA6B01A4B477200A04218 /* adapters */ = {
 			isa = PBXGroup;
 			children = (
+				257FA6DA1A4C117400A04218 /* PortfolioAdapter.swift */,
+				257FA6DC1A4C118600A04218 /* StockAdapter.swift */,
+				257FA6E21A4C132C00A04218 /* BaseAdapter.swift */,
 			);
 			path = adapters;
 			sourceTree = "<group>";
@@ -145,8 +154,8 @@
 		257FA6B11A4B477200A04218 /* entities */ = {
 			isa = PBXGroup;
 			children = (
-				257FA6B21A4B477200A04218 /* Portfilios.swift */,
-				257FA6B31A4B477200A04218 /* Stocks.swift */,
+				257FA6DE1A4C122D00A04218 /* Stock.swift */,
+				257FA6E01A4C128400A04218 /* Portfolio.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -154,9 +163,9 @@
 		257FA6B41A4B477200A04218 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				257FA6B51A4B477200A04218 /* commonFunc.swift */,
 				257FA6B61A4B477200A04218 /* CoreData.swift */,
 				257FA6B71A4B477200A04218 /* RestService.swift */,
+				25D5077B1A4C32A500B233F3 /* CommonFunc.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -341,16 +350,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257FA6CB1A4B477200A04218 /* commonFunc.swift in Sources */,
+				25D5077C1A4C32A500B233F3 /* CommonFunc.swift in Sources */,
 				257FA6C01A4B477200A04218 /* AppDelegate.swift in Sources */,
 				257FA6D71A4BF96100A04218 /* PortfolioListViewController.swift in Sources */,
 				257FA6CC1A4B477200A04218 /* CoreData.swift in Sources */,
+				257FA6DB1A4C117400A04218 /* PortfolioAdapter.swift in Sources */,
+				257FA6DD1A4C118600A04218 /* StockAdapter.swift in Sources */,
 				257FA6D51A4BF86C00A04218 /* StockDetailsViewController.swift in Sources */,
 				257FA6D91A4BFA3F00A04218 /* AddPortfolioViewController.swift in Sources */,
+				257FA6E31A4C132C00A04218 /* BaseAdapter.swift in Sources */,
+				257FA6E11A4C128400A04218 /* Portfolio.swift in Sources */,
 				257FA6D11A4B477200A04218 /* TableViewCell.swift in Sources */,
-				257FA6CA1A4B477200A04218 /* Stocks.swift in Sources */,
+				257FA6DF1A4C122D00A04218 /* Stock.swift in Sources */,
 				257FA6C31A4B477200A04218 /* PortfolioCollectionViewCell.swift in Sources */,
-				257FA6C91A4B477200A04218 /* Portfilios.swift in Sources */,
 				257FA6C61A4B477200A04218 /* NewApp.xcdatamodeld in Sources */,
 				257FA6D01A4B477200A04218 /* staticTableViewCell.swift in Sources */,
 				257FA6CD1A4B477200A04218 /* RestService.swift in Sources */,

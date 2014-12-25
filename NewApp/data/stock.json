@@ -1,42 +1,42 @@
 [
  
  {
- "stockid":"001",
+ "stockId":"001",
  "name" : "stock1",
  "lowest" : "$10",
  "highest" : "$50",
  "current" : "$40",
  },
  {
- "stockid":"002",
+ "stockId":"002",
  "name" : "stock2",
  "lowest" : "$40",
  "highest" : "$900",
  "current" : "$50",
  },
  {
- "stockid":"003",
+ "stockId":"003",
  "name" : "stock3",
  "lowest" : "$40",
  "highest" : "$60",
  "current" : "$50",
  },
  {
- "stockid":"004",
+ "stockId":"004",
  "name" : "stock4",
  "lowest" : "$190",
  "highest" : "$200",
  "current" : "$1950",
  }
  ,{
- "stockid":"005",
+ "stockId":"005",
  "name" : "stock5",
  "lowest" : "$40",
  "highest" : "$80",
  "current" : "$50",
  },
  {
- "stockid":"006",
+ "stockId":"006",
  "name" : "stock6",
  "lowest" : "$40",
  "highest" : "$100",
