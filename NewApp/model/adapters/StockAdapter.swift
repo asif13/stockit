@@ -26,7 +26,7 @@ class StockAdapter :BaseAdapter {
         let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Stock")
         
-        let predicate_id:NSPredicate = NSPredicate(format: "stockId = \(id)")!
+        let predicate_id:NSPredicate = NSPredicate(format: "stockId = %@", id)!
         
         var compound = NSCompoundPredicate.andPredicateWithSubpredicates([predicate_id])
         

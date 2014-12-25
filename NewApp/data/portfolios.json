@@ -1,6 +1,6 @@
 [
  {
- "id" : "one",
+ "portfolioId" : "one",
  "stocks" : [
              {
              "id":"001"
@@ -11,7 +11,7 @@
              ]
  },
  {
- "id" : "two",
+ "portfolioId" : "two",
  "stocks" : [
              {
              "id":"003"

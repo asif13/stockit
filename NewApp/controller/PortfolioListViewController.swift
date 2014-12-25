@@ -8,38 +8,44 @@
 
 import UIKit
 import CoreData
-class PortfolioListViewController: UIViewController,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate, UITableViewDelegate {
+class PortfolioListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var listViewTitleLabel: UILabel!
     @IBOutlet weak var tabletopbutton: UIButton!
-    @IBOutlet weak var portfoliotitle: UILabel!
     @IBOutlet weak var tabletop: UIView!
     @IBOutlet weak var ibtableview: UITableView!
-    var arr=["one","two"];
+    
+    
+    var displayData:[String] = [String]()
+    
     var response = Dictionary<String,[String]>()
-    var mystocks:[Stock] = [Stock]();
-    var selectedIndex:Int=Int();
-    var myPortfolios:NSArray=NSArray();
+    
+    var mystocks:[Stock] = [Stock]()
+    var selectedIndex:Int=Int()
+    var myPortfolios:[Portfolio] = [Portfolio]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tabletopbutton.hidden=true;
-        ParseJson().fetchFromJson()
-        portfoliotitle.text="Portfolios";
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        let managedContext = appDelegate.managedObjectContext!
-        var freq=NSFetchRequest(entityName: "Stock")
-        var mystock=managedContext.executeFetchRequest(freq, error: nil)!
-        mystocks = mystock as [Stock];
-        freq=NSFetchRequest(entityName: "Portfolio")
-        myPortfolios = managedContext.executeFetchRequest(freq, error: nil)!
-        println(myPortfolios.count)
-        var j=0;
-        for var j=0; j<(myPortfolios.count); ++j {
-            println(myPortfolios[j].valueForKey("portfolioId"))
-            var stockarray:[String] = NSKeyedUnarchiver.unarchiveObjectWithData(myPortfolios[j].valueForKey("stocks") as NSData) as [String]
-            response[myPortfolios[j].valueForKey("portfolioId") as String] = stockarray
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        tabletopbutton.hidden = true;
+        listViewTitleLabel.text = "Portfolios"
+        self.myPortfolios = CoreDataOps().getAllPortfolios()
+        
+        if self.myPortfolios.count < 1 {
+            CoreDataOps().addPortfolio("First Portfolio")
+            var stockId = "Goog"
+            var name = "Google"
+            var low = "$223.54"
+            var high = "$230"
+            var current = "$228.45"
+            CoreDataOps().addStockToPortfolio("First Portfolio", stockId: stockId, name: name, low: low, high: high, current: current)
         }
-        println(response)
+        self.loadDisplayData()
         
     }
     
@@ -47,96 +53,85 @@ class PortfolioListViewController: UIViewController,UITableViewDataSource,UIColl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        return self.displayData.count
     }
     
     
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
         var cell = ibtableview.dequeueReusableCellWithIdentifier("icell", forIndexPath: indexPath) as TableViewCell
-        
-        
-        
-        cell.lable.text = toString((arr[indexPath.row]))
+        cell.lable.text = toString((displayData[indexPath.row]))
         return cell
         
     }
     
-    func show()
-    {   var j=0;
-        var stockarray:[String] = response[arr[selectedIndex]]!
-        println(arr[selectedIndex])
-        portfoliotitle.text=arr[selectedIndex];
-        arr.removeAll();
-        for j in 0...(stockarray.count-1)
-        {println(mystocks.count)
-            var i=0;
-            for i in 0...(mystocks.count-1)
-            {       if(mystocks[i].valueForKey("stockid") as String == stockarray[j])
-            {println(mystocks[i].valueForKey("stockid"))
-                println(stockarray[j])
-                var name:String = mystocks[i].valueForKey("name") as String
-                arr.append(name)
-                ibtableview.reloadData();
-                }
-            }
-        }
-        tabletopbutton.hidden=false;
-    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if(portfoliotitle.text=="Portfolios")
-        {
+        if(listViewTitleLabel.text=="Portfolios"){
             selectedIndex = indexPath.row
-            return self.show()
+            self.listViewTitleLabel.text = "Stocks"
+            self.loadDisplayData()
         }
-        else
-        {   var detailcontroller:StockDetailsViewController = StockDetailsViewController()
+            
+        else{
+            var detailcontroller:StockDetailsViewController = StockDetailsViewController()
             detailcontroller.lable = "Hello";
             detailcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
             self.presentViewController(detailcontroller, animated: true, completion: nil)
         }
     }
     
-    @IBAction func refreshBack(sender: AnyObject) {
-        arr.removeAll()
-        var i=0;
-        for i in 0...(response.count-1)
-        {   arr.append(myPortfolios[i].valueForKey("portfolioId") as String)
-            ibtableview.reloadData()
+    
+    func loadDisplayData(){
+        if listViewTitleLabel.text == "Portfolios" {
+            displayData.removeAll()
+            var folios = CoreDataOps().getAllPortfolios() as [Portfolio]
+            for i in folios {
+                displayData.append(i.portfolioId)
+            }
         }
-        portfoliotitle.text="Portfolios";
-        tabletopbutton.hidden=true;
-    }
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myPortfolios.count;
-    }
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell=collectionView.dequeueReusableCellWithReuseIdentifier("portfolio", forIndexPath: indexPath) as  PortfolioCollectionViewCell
-        cell.portfoilititle.text = myPortfolios[indexPath.row].valueForKey("portfolioId") as? String
-        return cell
-    }
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        else if listViewTitleLabel.text == "Stocks" {
+            var stks = CoreDataOps().getAllStocksForPortfolio(displayData[self.selectedIndex])
+            if stks.count > 0 {
+                displayData.removeAll()
+            }
+        }
         
+        println(self.displayData)
+        self.ibtableview.reloadData()
     }
-    @IBAction func addportfolio(sender: AnyObject) {
-        
-    }
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if(segue.identifier=="Details")
-        {
+        
+        if(segue.identifier=="Details"){
             println("hello");
             var Details = segue.destinationViewController as StockDetailsViewController
             var mycell:TableViewCell=sender as TableViewCell
             Details.lable = mycell.lable.text!
         }
     }
+    
+    @IBAction func refreshBack(sender: AnyObject) {
+        
+    }
+    
+    
+    @IBAction func addportfolio(sender: AnyObject) {
+        println("hello")
+        
+    }
+    
+    
     
     
 }

@@ -12,6 +12,6 @@ import CoreData
 class Portfolio: NSManagedObject {
     
     @NSManaged var portfolioId: String
-    @NSManaged var stocks: NSData
+    @NSManaged var stocks: NSSet
     
 }

@@ -16,5 +16,6 @@ class Stock: NSManagedObject {
     @NSManaged var low: String
     @NSManaged var high: String
     @NSManaged var current: String
+    @NSManaged var portfolio: Portfolio
     
 }

@@ -25,8 +25,8 @@ class PortfolioAdapter :BaseAdapter {
         
         let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Portfolio")
-        
-        let predicate_id:NSPredicate = NSPredicate(format: "portfolioId = \(id)")!
+        println("portfolioId = \(id)")
+        let predicate_id:NSPredicate = NSPredicate(format: "portfolioId = %@", id)!
         
         var compound = NSCompoundPredicate.andPredicateWithSubpredicates([predicate_id])
         
