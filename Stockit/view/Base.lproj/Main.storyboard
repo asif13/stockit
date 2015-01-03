@@ -170,6 +170,37 @@
             </objects>
             <point key="canvasLocation" x="-9448" y="-4549"/>
         </scene>
+        <!--Stock Details View Controller-->
+        <scene sceneID="afe-wg-fLv">
+            <objects>
+                <viewController id="ZcP-x8-Urk" customClass="StockDetailsViewController" customModule="Stockit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q2G-5b-lsI"/>
+                        <viewControllerLayoutGuide type="bottom" id="s6G-L6-7Xo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D0u-nv-xvY">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lks-5S-8sh">
+                                <rect key="frame" x="184" y="90" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="400"/>
+                    <connections>
+                        <outlet property="lable1" destination="lks-5S-8sh" id="aEe-0r-MwU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCb-Wf-52e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8840" y="-4974"/>
+        </scene>
         <!--Add Stock View Controller-->
         <scene sceneID="dDc-D3-tHY">
             <objects>

@@ -15,7 +15,10 @@ class StockDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title=lable;
+        var onClickBehind = UITapGestureRecognizer(target: self, action: "tapBehind:")
+        onClickBehind.numberOfTapsRequired = 1
+        onClickBehind.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(onClickBehind)
         // Do any additional setup after loading the view.
     }
     
@@ -28,6 +31,10 @@ class StockDetailsViewController: UIViewController {
     @IBAction func dismiss(sender: AnyObject) {
         self.dismissViewControllerAnimated(true , completion: nil)
         
+    }
+    
+    @IBAction func tapBehind(sender:AnyObject){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     /*
     // MARK: - Navigation

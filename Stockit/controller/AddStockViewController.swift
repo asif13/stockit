@@ -26,7 +26,10 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var onClickBehind = UITapGestureRecognizer(target: self, action: "tapBehind:")
+        onClickBehind.numberOfTapsRequired = 1
+        onClickBehind.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(onClickBehind)
         // Do any additional setup after loading the view.
     }
 
@@ -99,6 +102,10 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
         stockListTableView.reloadData()
         
         
+    }
+    
+    @IBAction func tapBehind(sender:AnyObject){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
