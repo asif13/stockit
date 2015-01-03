@@ -7,13 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25898D1E1A57B50000FFF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D1D1A57B50000FFF2DD /* AppDelegate.swift */; };
-		25898D211A57B50000FFF2DD /* Stockit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25898D1F1A57B50000FFF2DD /* Stockit.xcdatamodeld */; };
-		25898D231A57B50000FFF2DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D221A57B50000FFF2DD /* ViewController.swift */; };
-		25898D261A57B50000FFF2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25898D241A57B50000FFF2DD /* Main.storyboard */; };
-		25898D281A57B50000FFF2DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25898D271A57B50000FFF2DD /* Images.xcassets */; };
-		25898D2B1A57B50000FFF2DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25898D291A57B50000FFF2DD /* LaunchScreen.xib */; };
 		25898D371A57B50000FFF2DD /* StockitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D361A57B50000FFF2DD /* StockitTests.swift */; };
+		25898D6B1A57B62400FFF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D411A57B62400FFF2DD /* AppDelegate.swift */; };
+		25898D6C1A57B62400FFF2DD /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D441A57B62400FFF2DD /* AddPortfolioViewController.swift */; };
+		25898D6D1A57B62400FFF2DD /* AddStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D451A57B62400FFF2DD /* AddStockViewController.swift */; };
+		25898D6E1A57B62400FFF2DD /* PortfolioDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D461A57B62400FFF2DD /* PortfolioDetailsViewController.swift */; };
+		25898D6F1A57B62400FFF2DD /* PortfoliosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D471A57B62400FFF2DD /* PortfoliosTableViewController.swift */; };
+		25898D701A57B62400FFF2DD /* StockDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D481A57B62400FFF2DD /* StockDetailsViewController.swift */; };
+		25898D711A57B62400FFF2DD /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 25898D4A1A57B62400FFF2DD /* data.json */; };
+		25898D721A57B62400FFF2DD /* NewApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25898D4B1A57B62400FFF2DD /* NewApp.xcdatamodeld */; };
+		25898D731A57B62400FFF2DD /* portfolios.json in Resources */ = {isa = PBXBuildFile; fileRef = 25898D4D1A57B62400FFF2DD /* portfolios.json */; };
+		25898D741A57B62400FFF2DD /* stock.json in Resources */ = {isa = PBXBuildFile; fileRef = 25898D4E1A57B62400FFF2DD /* stock.json */; };
+		25898D751A57B62400FFF2DD /* stockList.json in Resources */ = {isa = PBXBuildFile; fileRef = 25898D4F1A57B62400FFF2DD /* stockList.json */; };
+		25898D761A57B62400FFF2DD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 25898D531A57B62400FFF2DD /* Reachability.m */; };
+		25898D771A57B62400FFF2DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25898D541A57B62400FFF2DD /* Images.xcassets */; };
+		25898D781A57B62400FFF2DD /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D571A57B62400FFF2DD /* BaseAdapter.swift */; };
+		25898D791A57B62400FFF2DD /* PortfolioAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D581A57B62400FFF2DD /* PortfolioAdapter.swift */; };
+		25898D7A1A57B62400FFF2DD /* StockAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D591A57B62400FFF2DD /* StockAdapter.swift */; };
+		25898D7B1A57B62400FFF2DD /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D5B1A57B62400FFF2DD /* Portfolio.swift */; };
+		25898D7C1A57B62400FFF2DD /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D5C1A57B62400FFF2DD /* Stock.swift */; };
+		25898D7D1A57B62400FFF2DD /* CommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D5E1A57B62400FFF2DD /* CommonFunc.swift */; };
+		25898D7E1A57B62400FFF2DD /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D5F1A57B62400FFF2DD /* CoreData.swift */; };
+		25898D7F1A57B62400FFF2DD /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D601A57B62400FFF2DD /* RestService.swift */; };
+		25898D801A57B62400FFF2DD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D621A57B62400FFF2DD /* Constants.swift */; };
+		25898D811A57B62400FFF2DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25898D641A57B62400FFF2DD /* LaunchScreen.xib */; };
+		25898D821A57B62400FFF2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25898D661A57B62400FFF2DD /* Main.storyboard */; };
+		25898D831A57B62400FFF2DD /* PortfoliosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D681A57B62400FFF2DD /* PortfoliosTableViewCell.swift */; };
+		25898D841A57B62400FFF2DD /* staticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D691A57B62400FFF2DD /* staticTableViewCell.swift */; };
+		25898D851A57B62400FFF2DD /* StockSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +50,38 @@
 /* Begin PBXFileReference section */
 		25898D181A57B50000FFF2DD /* Stockit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25898D1C1A57B50000FFF2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25898D1D1A57B50000FFF2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25898D201A57B50000FFF2DD /* Stockit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stockit.xcdatamodel; sourceTree = "<group>"; };
-		25898D221A57B50000FFF2DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		25898D251A57B50000FFF2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		25898D271A57B50000FFF2DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		25898D2A1A57B50000FFF2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		25898D301A57B50000FFF2DD /* StockitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25898D351A57B50000FFF2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25898D361A57B50000FFF2DD /* StockitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockitTests.swift; sourceTree = "<group>"; };
+		25898D411A57B62400FFF2DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		25898D441A57B62400FFF2DD /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
+		25898D451A57B62400FFF2DD /* AddStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStockViewController.swift; sourceTree = "<group>"; };
+		25898D461A57B62400FFF2DD /* PortfolioDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioDetailsViewController.swift; sourceTree = "<group>"; };
+		25898D471A57B62400FFF2DD /* PortfoliosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfoliosTableViewController.swift; sourceTree = "<group>"; };
+		25898D481A57B62400FFF2DD /* StockDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailsViewController.swift; sourceTree = "<group>"; };
+		25898D4A1A57B62400FFF2DD /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		25898D4C1A57B62400FFF2DD /* NewApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewApp.xcdatamodel; sourceTree = "<group>"; };
+		25898D4D1A57B62400FFF2DD /* portfolios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = portfolios.json; sourceTree = "<group>"; };
+		25898D4E1A57B62400FFF2DD /* stock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock.json; sourceTree = "<group>"; };
+		25898D4F1A57B62400FFF2DD /* stockList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockList.json; sourceTree = "<group>"; };
+		25898D521A57B62400FFF2DD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		25898D531A57B62400FFF2DD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		25898D541A57B62400FFF2DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		25898D571A57B62400FFF2DD /* BaseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAdapter.swift; sourceTree = "<group>"; };
+		25898D581A57B62400FFF2DD /* PortfolioAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioAdapter.swift; sourceTree = "<group>"; };
+		25898D591A57B62400FFF2DD /* StockAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockAdapter.swift; sourceTree = "<group>"; };
+		25898D5B1A57B62400FFF2DD /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		25898D5C1A57B62400FFF2DD /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		25898D5E1A57B62400FFF2DD /* CommonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunc.swift; sourceTree = "<group>"; };
+		25898D5F1A57B62400FFF2DD /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		25898D601A57B62400FFF2DD /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		25898D621A57B62400FFF2DD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		25898D651A57B62400FFF2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		25898D671A57B62400FFF2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25898D681A57B62400FFF2DD /* PortfoliosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfoliosTableViewCell.swift; sourceTree = "<group>"; };
+		25898D691A57B62400FFF2DD /* staticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = staticTableViewCell.swift; sourceTree = "<group>"; };
+		25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockSearchTableViewCell.swift; sourceTree = "<group>"; };
+		25898D861A57BAAF00FFF2DD /* Stockit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stockit-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +123,14 @@
 		25898D1A1A57B50000FFF2DD /* Stockit */ = {
 			isa = PBXGroup;
 			children = (
-				25898D1D1A57B50000FFF2DD /* AppDelegate.swift */,
-				25898D221A57B50000FFF2DD /* ViewController.swift */,
-				25898D241A57B50000FFF2DD /* Main.storyboard */,
-				25898D271A57B50000FFF2DD /* Images.xcassets */,
-				25898D291A57B50000FFF2DD /* LaunchScreen.xib */,
-				25898D1F1A57B50000FFF2DD /* Stockit.xcdatamodeld */,
+				25898D401A57B62400FFF2DD /* application */,
+				25898D421A57B62400FFF2DD /* constants */,
+				25898D431A57B62400FFF2DD /* controller */,
+				25898D491A57B62400FFF2DD /* data */,
+				25898D501A57B62400FFF2DD /* frameworks */,
+				25898D541A57B62400FFF2DD /* Images.xcassets */,
+				25898D551A57B62400FFF2DD /* model */,
+				25898D631A57B62400FFF2DD /* view */,
 				25898D1B1A57B50000FFF2DD /* Supporting Files */,
 			);
 			path = Stockit;
@@ -94,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				25898D1C1A57B50000FFF2DD /* Info.plist */,
+				25898D861A57BAAF00FFF2DD /* Stockit-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -113,6 +160,122 @@
 				25898D351A57B50000FFF2DD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25898D401A57B62400FFF2DD /* application */ = {
+			isa = PBXGroup;
+			children = (
+				25898D411A57B62400FFF2DD /* AppDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		25898D421A57B62400FFF2DD /* constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		25898D431A57B62400FFF2DD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				25898D441A57B62400FFF2DD /* AddPortfolioViewController.swift */,
+				25898D451A57B62400FFF2DD /* AddStockViewController.swift */,
+				25898D461A57B62400FFF2DD /* PortfolioDetailsViewController.swift */,
+				25898D471A57B62400FFF2DD /* PortfoliosTableViewController.swift */,
+				25898D481A57B62400FFF2DD /* StockDetailsViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		25898D491A57B62400FFF2DD /* data */ = {
+			isa = PBXGroup;
+			children = (
+				25898D4A1A57B62400FFF2DD /* data.json */,
+				25898D4B1A57B62400FFF2DD /* NewApp.xcdatamodeld */,
+				25898D4D1A57B62400FFF2DD /* portfolios.json */,
+				25898D4E1A57B62400FFF2DD /* stock.json */,
+				25898D4F1A57B62400FFF2DD /* stockList.json */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		25898D501A57B62400FFF2DD /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25898D511A57B62400FFF2DD /* Reachability */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		25898D511A57B62400FFF2DD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				25898D521A57B62400FFF2DD /* Reachability.h */,
+				25898D531A57B62400FFF2DD /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		25898D551A57B62400FFF2DD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				25898D561A57B62400FFF2DD /* adapters */,
+				25898D5A1A57B62400FFF2DD /* entities */,
+				25898D5D1A57B62400FFF2DD /* services */,
+				25898D611A57B62400FFF2DD /* utils */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		25898D561A57B62400FFF2DD /* adapters */ = {
+			isa = PBXGroup;
+			children = (
+				25898D571A57B62400FFF2DD /* BaseAdapter.swift */,
+				25898D581A57B62400FFF2DD /* PortfolioAdapter.swift */,
+				25898D591A57B62400FFF2DD /* StockAdapter.swift */,
+			);
+			path = adapters;
+			sourceTree = "<group>";
+		};
+		25898D5A1A57B62400FFF2DD /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				25898D5B1A57B62400FFF2DD /* Portfolio.swift */,
+				25898D5C1A57B62400FFF2DD /* Stock.swift */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		25898D5D1A57B62400FFF2DD /* services */ = {
+			isa = PBXGroup;
+			children = (
+				25898D5E1A57B62400FFF2DD /* CommonFunc.swift */,
+				25898D5F1A57B62400FFF2DD /* CoreData.swift */,
+				25898D601A57B62400FFF2DD /* RestService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		25898D611A57B62400FFF2DD /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				25898D621A57B62400FFF2DD /* Constants.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		25898D631A57B62400FFF2DD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				25898D641A57B62400FFF2DD /* LaunchScreen.xib */,
+				25898D661A57B62400FFF2DD /* Main.storyboard */,
+				25898D681A57B62400FFF2DD /* PortfoliosTableViewCell.swift */,
+				25898D691A57B62400FFF2DD /* staticTableViewCell.swift */,
+				25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +358,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25898D261A57B50000FFF2DD /* Main.storyboard in Resources */,
-				25898D2B1A57B50000FFF2DD /* LaunchScreen.xib in Resources */,
-				25898D281A57B50000FFF2DD /* Images.xcassets in Resources */,
+				25898D821A57B62400FFF2DD /* Main.storyboard in Resources */,
+				25898D741A57B62400FFF2DD /* stock.json in Resources */,
+				25898D771A57B62400FFF2DD /* Images.xcassets in Resources */,
+				25898D731A57B62400FFF2DD /* portfolios.json in Resources */,
+				25898D751A57B62400FFF2DD /* stockList.json in Resources */,
+				25898D811A57B62400FFF2DD /* LaunchScreen.xib in Resources */,
+				25898D711A57B62400FFF2DD /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +382,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25898D231A57B50000FFF2DD /* ViewController.swift in Sources */,
-				25898D1E1A57B50000FFF2DD /* AppDelegate.swift in Sources */,
-				25898D211A57B50000FFF2DD /* Stockit.xcdatamodeld in Sources */,
+				25898D7B1A57B62400FFF2DD /* Portfolio.swift in Sources */,
+				25898D801A57B62400FFF2DD /* Constants.swift in Sources */,
+				25898D831A57B62400FFF2DD /* PortfoliosTableViewCell.swift in Sources */,
+				25898D701A57B62400FFF2DD /* StockDetailsViewController.swift in Sources */,
+				25898D6C1A57B62400FFF2DD /* AddPortfolioViewController.swift in Sources */,
+				25898D761A57B62400FFF2DD /* Reachability.m in Sources */,
+				25898D841A57B62400FFF2DD /* staticTableViewCell.swift in Sources */,
+				25898D7E1A57B62400FFF2DD /* CoreData.swift in Sources */,
+				25898D7C1A57B62400FFF2DD /* Stock.swift in Sources */,
+				25898D6F1A57B62400FFF2DD /* PortfoliosTableViewController.swift in Sources */,
+				25898D791A57B62400FFF2DD /* PortfolioAdapter.swift in Sources */,
+				25898D6B1A57B62400FFF2DD /* AppDelegate.swift in Sources */,
+				25898D6E1A57B62400FFF2DD /* PortfolioDetailsViewController.swift in Sources */,
+				25898D6D1A57B62400FFF2DD /* AddStockViewController.swift in Sources */,
+				25898D7F1A57B62400FFF2DD /* RestService.swift in Sources */,
+				25898D7A1A57B62400FFF2DD /* StockAdapter.swift in Sources */,
+				25898D781A57B62400FFF2DD /* BaseAdapter.swift in Sources */,
+				25898D7D1A57B62400FFF2DD /* CommonFunc.swift in Sources */,
+				25898D851A57B62400FFF2DD /* StockSearchTableViewCell.swift in Sources */,
+				25898D721A57B62400FFF2DD /* NewApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,20 +424,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		25898D241A57B50000FFF2DD /* Main.storyboard */ = {
+		25898D641A57B62400FFF2DD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				25898D251A57B50000FFF2DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		25898D291A57B50000FFF2DD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				25898D2A1A57B50000FFF2DD /* Base */,
+				25898D651A57B62400FFF2DD /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		25898D661A57B62400FFF2DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25898D671A57B62400FFF2DD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -345,6 +529,8 @@
 				INFOPLIST_FILE = Stockit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stockit/Stockit-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -355,6 +541,8 @@
 				INFOPLIST_FILE = Stockit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stockit/Stockit-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -423,13 +611,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		25898D1F1A57B50000FFF2DD /* Stockit.xcdatamodeld */ = {
+		25898D4B1A57B62400FFF2DD /* NewApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				25898D201A57B50000FFF2DD /* Stockit.xcdatamodel */,
+				25898D4C1A57B62400FFF2DD /* NewApp.xcdatamodel */,
 			);
-			currentVersion = 25898D201A57B50000FFF2DD /* Stockit.xcdatamodel */;
-			path = Stockit.xcdatamodeld;
+			currentVersion = 25898D4C1A57B62400FFF2DD /* NewApp.xcdatamodel */;
+			path = NewApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

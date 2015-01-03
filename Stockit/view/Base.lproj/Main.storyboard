@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uiG-eT-3gY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Portfolio Details View Controller-->
+        <scene sceneID="oX5-3D-oBW">
+            <objects>
+                <viewController id="qcj-w8-dBY" customClass="PortfolioDetailsViewController" customModule="Stockit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UbM-11-q0V"/>
+                        <viewControllerLayoutGuide type="bottom" id="v1b-Pj-Ypi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DHr-7y-CHL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1R-va-DR8">
+                                <rect key="frame" x="220" y="68" width="160" height="30"/>
+                                <state key="normal" title="Add Stocks to Portfolio">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="17W-XR-QCm" kind="presentation" identifier="addStocks" id="XAY-cz-DlF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="addStockButton" destination="Z1R-va-DR8" id="Doe-Re-fFm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keT-mP-Sdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10062" y="-4499"/>
+        </scene>
+        <!--Portfolios-->
+        <scene sceneID="xVk-Ot-ksu">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Yyp-gr-OOG" customClass="PortfoliosTableViewController" customModule="Stockit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="46m-nP-EzK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="icell" id="EE0-Uf-8Ec" customClass="PortfoliosTableViewCell" customModule="Stockit" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EE0-Uf-8Ec" id="sxn-pF-LVA">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCU-Mr-rlG">
+                                            <rect key="frame" x="15" y="11" width="239" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lable" destination="gCU-Mr-rlG" id="RL2-mJ-3tp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yyp-gr-OOG" id="HoN-Gl-i1s"/>
+                            <outlet property="delegate" destination="Yyp-gr-OOG" id="b2k-xF-abp"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Portfolios" id="U7t-Fv-SQ4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DXc-BT-ZAQ">
+                            <connections>
+                                <action selector="addItemBarButton:" destination="Yyp-gr-OOG" id="cHJ-Fb-BCn"/>
+                                <segue destination="1Cb-iw-VA5" kind="presentation" identifier="presentAddPortfolio" id="1BV-7s-txx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="rightBarButton" destination="DXc-BT-ZAQ" id="kaI-YK-roP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCP-Je-yVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9398" y="-5155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ef9-KP-FgV">
+            <objects>
+                <navigationController id="D1x-01-OU7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ka7-eV-wbp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Yyp-gr-OOG" kind="relationship" relationship="rootViewController" id="qfb-RH-mW4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dof-2L-26w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10062" y="-5163"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="6Po-uC-ufP">
+            <objects>
+                <splitViewController id="uiG-eT-3gY" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="D1x-01-OU7" kind="relationship" relationship="masterViewController" id="of4-yd-FNA"/>
+                        <segue destination="qcj-w8-dBY" kind="relationship" relationship="detailViewController" id="tjF-A2-Qup"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRl-WO-6IC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10734" y="-4841"/>
+        </scene>
+        <!--Add Portfolio View Controller-->
+        <scene sceneID="CeQ-a4-tT9">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="1Cb-iw-VA5" customClass="AddPortfolioViewController" customModule="Stockit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="73Z-lV-Clx"/>
+                        <viewControllerLayoutGuide type="bottom" id="7iq-8b-qjx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="atq-lq-cmg">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJi-KM-TOh">
+                                <rect key="frame" x="-4" y="0.0" width="309" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Portfolio" id="abG-1q-qtF"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Portfolio Name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7iq-8h-74s">
+                                <rect key="frame" x="46" y="95" width="223" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-KW-u53">
+                                <rect key="frame" x="122" y="191" width="56" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderIBColor">
+                                        <color key="value" red="0.87371969019999995" green="0.90385105300000002" blue="0.84766845749999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addPortfolio:" destination="1Cb-iw-VA5" eventType="touchUpInside" id="aO0-oM-49U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="portfolioNameTextField" destination="7iq-8h-74s" id="mss-Sn-x1l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6i-s3-bZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9448" y="-4549"/>
+        </scene>
+        <!--Add Stock View Controller-->
+        <scene sceneID="dDc-D3-tHY">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="17W-XR-QCm" customClass="AddStockViewController" customModule="Stockit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BhW-bS-W14"/>
+                        <viewControllerLayoutGuide type="bottom" id="7TS-6Y-eK0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WXe-3U-ena">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4vJ-26-gju">
+                                <rect key="frame" x="0.0" y="20" width="300" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="17W-XR-QCm" id="dH1-LY-aBD"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VId-bk-tbR">
+                                <rect key="frame" x="0.0" y="64" width="300" height="436"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockSearch" id="w2p-C7-g5X" customClass="StockSearchTableViewCell" customModule="Stockit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w2p-C7-g5X" id="MD8-rP-yai">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google Inc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH9-lq-mdj">
+                                                    <rect key="frame" x="26" y="11" width="132" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nasdaq" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt9-7f-XmU">
+                                                    <rect key="frame" x="181" y="11" width="111" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stockExchLabel" destination="gt9-7f-XmU" id="k4o-sz-t9A"/>
+                                            <outlet property="stockNameLabel" destination="QH9-lq-mdj" id="Zs6-3X-MFH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="17W-XR-QCm" id="j8t-uj-HfD"/>
+                                    <outlet property="delegate" destination="17W-XR-QCm" id="6qG-Ec-8tr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="500"/>
+                    <connections>
+                        <outlet property="stockListTableView" destination="VId-bk-tbR" id="fPb-RO-wH0"/>
+                        <outlet property="stockSearchBar" destination="4vJ-26-gju" id="Uao-sw-Cun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCS-26-WfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9448" y="-4105"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,22 @@
+[
+ {
+    "stockId": "GOOG"
+ },
+ 
+ {
+    "stockId": "APPL"
+ },
+ 
+ {
+    "stockId": "IBM"
+ },
+ 
+ {
+    "stockId": "FB"
+ },
+ 
+ {
+    "stockId": "REL"
+ }
+]
+//http://d.yimg.com/autoc.finance.yahoo.com/autoc?query=reli&callback=YAHOO.Finance.SymbolSuggest.ssCallback
