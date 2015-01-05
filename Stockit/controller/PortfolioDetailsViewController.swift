@@ -8,12 +8,18 @@
 
 import UIKit
 
-class PortfolioDetailsViewController: UIViewController {
+protocol PortfolioDetailsDelegate: class {
+    func loadPortfolioDetails()
+}
 
+class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PortfolioDetailsDelegate {
+    
+    @IBOutlet var stocksTableView: UITableView!
     @IBOutlet var addStockButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var portfolioTableVC:PortfoliosTableViewController = PortfoliosTableViewController()
+        portfolioTableVC.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +28,29 @@ class PortfolioDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 1
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.stocksTableView.dequeueReusableCellWithIdentifier("stockCell", forIndexPath: indexPath) as StockTableViewCell
+        cell.stockSymbolLabel.text = "Goog"
+        return cell
+        
+    }
+    
+    func loadPortfolioDetails() {
+        println("delegating")
+    }
     
     /*
     // MARK: - Navigation

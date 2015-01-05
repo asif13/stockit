@@ -15,13 +15,16 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
     var displayData:[String] = [String]()
     var myPortfolios:[Portfolio] = [Portfolio]()
     var selectedIndex:Int=Int()
+    var delegate: PortfolioDetailsViewController?
+    //PortfolioDetailsDelegate?
 
+    
     @IBOutlet var rightBarButton: UIBarButtonItem!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -161,6 +164,9 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
             detailcontroller.lable = "Hello"
             detailcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
             self.presentViewController(detailcontroller, animated: true, completion: nil)
+        }
+        else{
+            self.delegate?.loadPortfolioDetails()
         }
         
     }

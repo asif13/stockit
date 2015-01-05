@@ -8,16 +8,6 @@
 
 import UIKit
 
-class stockData{
-    var name:String
-    var exch:String
-    
-    init(name:String, exch:String){
-        self.name = name
-        self.exch = exch
-    }
-}
-
 class AddStockViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate {
     @IBOutlet var stockSearchBar: UISearchBar!
     @IBOutlet var stockListTableView: UITableView!

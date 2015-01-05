@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2536DFE31A594DDB0010FAA3 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2536DFE21A594DDB0010FAA3 /* StockTableViewCell.swift */; };
 		25898D371A57B50000FFF2DD /* StockitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D361A57B50000FFF2DD /* StockitTests.swift */; };
 		25898D6B1A57B62400FFF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D411A57B62400FFF2DD /* AppDelegate.swift */; };
 		25898D6C1A57B62400FFF2DD /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D441A57B62400FFF2DD /* AddPortfolioViewController.swift */; };
@@ -35,6 +36,7 @@
 		25898D831A57B62400FFF2DD /* PortfoliosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D681A57B62400FFF2DD /* PortfoliosTableViewCell.swift */; };
 		25898D841A57B62400FFF2DD /* staticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D691A57B62400FFF2DD /* staticTableViewCell.swift */; };
 		25898D851A57B62400FFF2DD /* StockSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */; };
+		259975F41A599B7500A40279 /* stockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259975F31A599B7500A40279 /* stockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2536DFE21A594DDB0010FAA3 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		25898D181A57B50000FFF2DD /* Stockit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25898D1C1A57B50000FFF2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25898D301A57B50000FFF2DD /* StockitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +85,7 @@
 		25898D691A57B62400FFF2DD /* staticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = staticTableViewCell.swift; sourceTree = "<group>"; };
 		25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockSearchTableViewCell.swift; sourceTree = "<group>"; };
 		25898D861A57BAAF00FFF2DD /* Stockit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stockit-Bridging-Header.h"; sourceTree = "<group>"; };
+		259975F31A599B7500A40279 /* stockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,7 @@
 			children = (
 				25898D5B1A57B62400FFF2DD /* Portfolio.swift */,
 				25898D5C1A57B62400FFF2DD /* Stock.swift */,
+				259975F31A599B7500A40279 /* stockData.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				25898D681A57B62400FFF2DD /* PortfoliosTableViewCell.swift */,
 				25898D691A57B62400FFF2DD /* staticTableViewCell.swift */,
 				25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */,
+				2536DFE21A594DDB0010FAA3 /* StockTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259975F41A599B7500A40279 /* stockData.swift in Sources */,
 				25898D7B1A57B62400FFF2DD /* Portfolio.swift in Sources */,
 				25898D801A57B62400FFF2DD /* Constants.swift in Sources */,
 				25898D831A57B62400FFF2DD /* PortfoliosTableViewCell.swift in Sources */,
@@ -389,6 +396,7 @@
 				25898D6C1A57B62400FFF2DD /* AddPortfolioViewController.swift in Sources */,
 				25898D761A57B62400FFF2DD /* Reachability.m in Sources */,
 				25898D841A57B62400FFF2DD /* staticTableViewCell.swift in Sources */,
+				2536DFE31A594DDB0010FAA3 /* StockTableViewCell.swift in Sources */,
 				25898D7E1A57B62400FFF2DD /* CoreData.swift in Sources */,
 				25898D7C1A57B62400FFF2DD /* Stock.swift in Sources */,
 				25898D6F1A57B62400FFF2DD /* PortfoliosTableViewController.swift in Sources */,
@@ -599,6 +607,7 @@
 				25898D3C1A57B50000FFF2DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25898D3D1A57B50000FFF2DD /* Build configuration list for PBXNativeTarget "StockitTests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +616,7 @@
 				25898D3F1A57B50000FFF2DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
