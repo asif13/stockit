@@ -43,13 +43,6 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
         
         if self.myPortfolios.count < 1 {
             CoreDataOps().addPortfolio("First Portfolio")
-            var stockId = "Goog"
-            var name = "Google"
-            var low = "$223.54"
-            var high = "$230"
-            var current = "$228.45"
-            var exchange = "NYQ"
-            CoreDataOps().addStockToPortfolio("First Portfolio", stockId: stockId, name: name, low: low, high: high, current: current, exchange: exchange)
         }
         self.loadDisplayData()
         
@@ -200,7 +193,6 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        var selectedRow = self.tableView.indexPathForSelectedRow()!.row
         if(segue.identifier=="Details"){
             var Details = segue.destinationViewController as StockDetailsViewController
             var mycell:PortfoliosTableViewCell = sender as PortfoliosTableViewCell
@@ -214,7 +206,7 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
             addFolio.delegate = self
         }
         else if(segue.identifier == "showdetail")
-        {
+        {   var selectedRow = self.tableView.indexPathForSelectedRow()!.row
             var PortfolioDetail : PortfolioDetailsViewController = PortfolioDetailsViewController()
             PortfolioDetail = segue.destinationViewController as PortfolioDetailsViewController
             var cell:PortfoliosTableViewCell = sender as PortfoliosTableViewCell;

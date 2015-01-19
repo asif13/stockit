@@ -50,6 +50,10 @@ class AddPortfolioViewController: UIViewController {
         }
         
     }
+    @IBAction func dismiss(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true , completion:nil);
+
+    }
     
     
 //    @IBAction func tapBehind(sender:AnyObject){

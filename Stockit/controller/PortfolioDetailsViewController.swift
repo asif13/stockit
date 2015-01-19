@@ -27,8 +27,6 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        stockdetailview.hidden = true;
-        
         if(detailforportfolio != nil)
         {
             self.tableView.reloadData();

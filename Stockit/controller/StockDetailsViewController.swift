@@ -45,5 +45,8 @@ class StockDetailsViewController: UIViewController {
     // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func dismisscontroller(sender: AnyObject) {
+         self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }
