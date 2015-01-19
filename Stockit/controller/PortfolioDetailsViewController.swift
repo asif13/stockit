@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,AddStockViewControllerDelegate
 {
     
     @IBOutlet weak var stockdetailview: UIView!
@@ -40,6 +40,7 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
             if portfolios.count > 0  {
                 
                 var stks = CoreDataOps().getAllStocksForPortfolio(portfolios[0].portfolioId)
+                detailforportfolio = portfolios[0].portfolioId
                 stocks.removeAll()
                 if stks.count > 0 {
                     stockdetailview.hidden = false
@@ -101,7 +102,21 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
         if(segue.identifier=="AddStock"){
             var Details = segue.destinationViewController as AddStockViewController
             Details.portfolio = detailforportfolio
+            Details.delegate = self;
         }
+
+    }
+    func refreshStocks(yes: Bool) {
+        var stks = CoreDataOps().getAllStocksForPortfolio(detailforportfolio)
+        stocks.removeAll()
+        if stks.count > 0 {
+            stockdetailview.hidden = false
+            for i in stks {
+                stocks.append(i)
+            }
+            println(stocks)
+        }
+        tableView.reloadData()
 
     }
     

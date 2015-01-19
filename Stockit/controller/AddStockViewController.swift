@@ -8,24 +8,22 @@
 
 import UIKit
 
-//protocol refreshStrock
-
+protocol AddStockViewControllerDelegate:class
+{    func refreshStocks(yes:Bool)
+}
 class AddStockViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate,UIGestureRecognizerDelegate {
     @IBOutlet var stockSearchBar: UISearchBar!
     @IBOutlet var stockListTableView: UITableView!
     var portfolio:String!
     var displayStockList = [stockData]()
-
+    var delegate:AddStockViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
        
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(animated: Bool) {
-        var onClickBehind = UITapGestureRecognizer(target: self, action: "tapBehind:")
-        onClickBehind.numberOfTapsRequired = 1
-        onClickBehind.cancelsTouchesInView = false
-        self.view.window?.addGestureRecognizer(onClickBehind)
+       
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,7 +61,10 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
         var exchange = displayStockList[indexPath.row].exch
         println(portfolio)
         CoreDataOps().addStockToPortfolio(portfolio, stockId: stockId, name: name, low: low, high: high, current: current, exchange: exchange)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true , completion: { () -> Void in
+            self.delegate?.refreshStocks(true)
+            return
+        })
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
@@ -100,23 +101,23 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
         
     }
     
-    @IBAction func tapBehind(sender:UITapGestureRecognizer){
-        if (sender.state == UIGestureRecognizerState.Ended)
-        {
-                
-            var location:CGPoint = sender.locationInView(nil) //Passing nil gives us coordinates in the window
-            println(location)
-            //Then we convert the tap's location into the local view's coordinate system, and test to see if it's in or outside. If outside, dismiss the view.
-           println((self.view.pointInside(self.view.convertPoint(location, fromView: self.view.window), withEvent: nil)))
-            if(!(self.view.pointInside(self.view.convertPoint(location, fromView: self.view.window), withEvent: nil)))
-            {   self.view.window?.removeGestureRecognizer(sender);
-                self.dismissViewControllerAnimated(true, completion: nil)
-
-            }
-           
-        }
-        
-    }
+//    @IBAction func tapBehind(sender:UITapGestureRecognizer){
+//        if (sender.state == UIGestureRecognizerState.Ended)
+//        {
+//                
+//            var location:CGPoint = sender.locationInView(nil) //Passing nil gives us coordinates in the window
+//            println(location)
+//            //Then we convert the tap's location into the local view's coordinate system, and test to see if it's in or outside. If outside, dismiss the view.
+//           println((self.view.pointInside(self.view.convertPoint(location, fromView: self.view.window), withEvent: nil)))
+//            if(!(self.view.pointInside(self.view.convertPoint(location, fromView: self.view.window), withEvent: nil)))
+//            {   self.view.window?.removeGestureRecognizer(sender);
+//                self.dismissViewControllerAnimated(true, completion: nil)
+//
+//            }
+//           
+//        }
+//        
+//    }
     @IBAction func dismiss(sender: AnyObject) {
           self.dismissViewControllerAnimated(true, completion: nil)
     }
