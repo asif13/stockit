@@ -8,21 +8,25 @@
 
 import UIKit
 
-class AddStockViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate {
+//protocol refreshStrock
+
+class AddStockViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate,UIGestureRecognizerDelegate {
     @IBOutlet var stockSearchBar: UISearchBar!
     @IBOutlet var stockListTableView: UITableView!
-    
+    var portfolio:String!
     var displayStockList = [stockData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(animated: Bool) {
         var onClickBehind = UITapGestureRecognizer(target: self, action: "tapBehind:")
         onClickBehind.numberOfTapsRequired = 1
         onClickBehind.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(onClickBehind)
-        // Do any additional setup after loading the view.
+        self.view.window?.addGestureRecognizer(onClickBehind)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,11 +56,13 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var stockId = displayStockList[indexPath.row].name
         var name = displayStockList[indexPath.row].name
+        println(displayStockList[indexPath.row].name)
         var low = "$223.54"
         var high = "$230"
         var current = "$228.45"
         var exchange = displayStockList[indexPath.row].exch
-        CoreDataOps().addStockToPortfolio("First Portfolio", stockId: stockId, name: name, low: low, high: high, current: current, exchange: exchange)
+        println(portfolio)
+        CoreDataOps().addStockToPortfolio(portfolio, stockId: stockId, name: name, low: low, high: high, current: current, exchange: exchange)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -94,10 +100,27 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
         
     }
     
-    @IBAction func tapBehind(sender:AnyObject){
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+    @IBAction func tapBehind(sender:UITapGestureRecognizer){
+        if (sender.state == UIGestureRecognizerState.Ended)
+        {
+                
+            var location:CGPoint = sender.locationInView(nil) //Passing nil gives us coordinates in the window
+            println(location)
+            //Then we convert the tap's location into the local view's coordinate system, and test to see if it's in or outside. If outside, dismiss the view.
+           println((self.view.pointInside(self.view.convertPoint(location, fromView: self.view.window), withEvent: nil)))
+            if(!(self.view.pointInside(self.view.convertPoint(location, fromView: self.view.window), withEvent: nil)))
+            {   self.view.window?.removeGestureRecognizer(sender);
+                self.dismissViewControllerAnimated(true, completion: nil)
 
+            }
+           
+        }
+        
+    }
+    @IBAction func dismiss(sender: AnyObject) {
+          self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

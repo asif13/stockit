@@ -8,18 +8,52 @@
 
 import UIKit
 
-protocol PortfolioDetailsDelegate: class {
-    func loadPortfolioDetails()
-}
 
-class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PortfolioDetailsDelegate {
+
+class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
     
-    @IBOutlet var stocksTableView: UITableView!
+    @IBOutlet weak var stockdetailview: UIView!
+    @IBOutlet weak var stocktitlelabel: UIView!
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var addStockButton: UIButton!
+    var stocks:[Stock] = [Stock]()
+    var detailforportfolio:String!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        var portfolioTableVC:PortfoliosTableViewController = PortfoliosTableViewController()
-        portfolioTableVC.delegate = self
+        stockdetailview.hidden = true;
+        
+        if(detailforportfolio != nil)
+        {
+            self.tableView.reloadData();
+            self.stockdetailview.hidden=false;
+        }
+        else
+        {
+            var portfolios = CoreDataOps().getAllPortfolios()
+            if portfolios.count > 0  {
+                
+                var stks = CoreDataOps().getAllStocksForPortfolio(portfolios[0].portfolioId)
+                stocks.removeAll()
+                if stks.count > 0 {
+                    stockdetailview.hidden = false
+                    for i in stks {
+                        stocks.append(i)
+                    }
+                    println(stocks)
+                }
+            }
+
+        }
+        if stocks.count < 1{
+            CommonFunc.showAlert("No Stocks", message: "No stocks for this portfolio")
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -31,25 +65,44 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        if(stocks.count>0)
+        {return 1;}
+        else
+        {
+            return 0;
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 1
+        if(stocks.count>0)
+        {return stocks.count;}
+        else
+        {
+        return 0;
+        }
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.stocksTableView.dequeueReusableCellWithIdentifier("stockCell", forIndexPath: indexPath) as StockTableViewCell
-        cell.stockSymbolLabel.text = "Goog"
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("stockCell", forIndexPath: indexPath) as StockTableViewCell
+        println(indexPath.row)
+        cell.stockSymbolLabel.text = stocks[indexPath.row].name;
+        cell.stockExchLabel.text=stocks[indexPath.row].exchange;
+        cell.stockPriceLabel.text=stocks[indexPath.row].current;
+        cell.stockSymbolLabel.sizeToFit()
+        cell.stockExchLabel.sizeToFit()
+        cell.stockPriceLabel.sizeToFit()
         return cell
         
     }
-    
-    func loadPortfolioDetails() {
-        println("delegating")
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier=="AddStock"){
+            var Details = segue.destinationViewController as AddStockViewController
+            Details.portfolio = detailforportfolio
+        }
+
     }
     
     /*
@@ -61,5 +114,4 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
         // Pass the selected object to the new view controller.
     }
     */
-
 }

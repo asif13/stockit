@@ -9,15 +9,12 @@
 import UIKit
 
 
-
-class PortfoliosTableViewController: UITableViewController, AddPortfolioViewControllerDelegate {
+class PortfoliosTableViewController: UITableViewController, AddPortfolioViewControllerDelegate{
     
     var displayData:[String] = [String]()
     var myPortfolios:[Portfolio] = [Portfolio]()
     var selectedIndex:Int=Int()
-    var delegate: PortfolioDetailsViewController?
-    //PortfolioDetailsDelegate?
-
+    var stocksForPortfolio:[Stock] = [Stock]()
     
     @IBOutlet var rightBarButton: UIBarButtonItem!
     
@@ -40,11 +37,8 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
         
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: "doubleTapCell:")
         doubleTapGesture.numberOfTapsRequired = 2
-        let singleTapGesture = UITapGestureRecognizer(target: self, action: "singleTapCell:")
-        singleTapGesture.numberOfTapsRequired = 1
         
         self.tableView.addGestureRecognizer(doubleTapGesture)
-        self.tableView.addGestureRecognizer(singleTapGesture)
         
         
         if self.myPortfolios.count < 1 {
@@ -54,7 +48,7 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
             var low = "$223.54"
             var high = "$230"
             var current = "$228.45"
-            var exchange = "Nasdaq"
+            var exchange = "NYQ"
             CoreDataOps().addStockToPortfolio("First Portfolio", stockId: stockId, name: name, low: low, high: high, current: current, exchange: exchange)
         }
         self.loadDisplayData()
@@ -87,8 +81,9 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
         return cell
 
     }
-    
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+         println("hello")
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -156,20 +151,19 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
         }
         
     }
-    
-    @IBAction func singleTapCell(sender:AnyObject){
-        
-        if self.navigationItem.title != "Portfolios" {
-            var detailcontroller:StockDetailsViewController = StockDetailsViewController()
-            detailcontroller.lable = "Hello"
-            detailcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
-            self.presentViewController(detailcontroller, animated: true, completion: nil)
-        }
-        else{
-            self.delegate?.loadPortfolioDetails()
-        }
-        
-    }
+//    @IBAction func singleTapCell(sender:AnyObject){
+//        
+//        if self.navigationItem.title != "Portfolios" {
+//            var detailcontroller:StockDetailsViewController = StockDetailsViewController()
+//            detailcontroller.lable = "Hello"
+//            detailcontroller.modalPresentationStyle = UIModalPresentationStyle.PageSheet;
+//            self.presentViewController(detailcontroller, animated: true, completion: nil)
+//        }
+//        else{
+//            self.delegate?.loadPortfolioDetails()
+//        }
+//        
+//    }
     
     @IBAction func refreshBack(sender: AnyObject) {
         self.navigationItem.title = "Portfolios"
@@ -206,16 +200,37 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
+        var selectedRow = self.tableView.indexPathForSelectedRow()!.row
         if(segue.identifier=="Details"){
             var Details = segue.destinationViewController as StockDetailsViewController
             var mycell:PortfoliosTableViewCell = sender as PortfoliosTableViewCell
             Details.lable = mycell.lable.text!
         }
             
+            
         else if(segue.identifier == "presentAddPortfolio"){
             var addFolio : AddPortfolioViewController = AddPortfolioViewController()
             addFolio = segue.destinationViewController as AddPortfolioViewController
             addFolio.delegate = self
+        }
+        else if(segue.identifier == "showdetail")
+        {
+            var PortfolioDetail : PortfolioDetailsViewController = PortfolioDetailsViewController()
+            PortfolioDetail = segue.destinationViewController as PortfolioDetailsViewController
+            var cell:PortfoliosTableViewCell = sender as PortfoliosTableViewCell;
+            var stks = CoreDataOps().getAllStocksForPortfolio(cell.lable.text as String!)
+            var stocks:[Stock] = [Stock]()
+            stocks.removeAll()
+            println(displayData[selectedRow])
+            PortfolioDetail.detailforportfolio = displayData[selectedRow]
+            if stks.count > 0 {
+                for i in stks {
+                    stocks.append(i)
+                }
+                
+                println(stocks)
+                PortfolioDetail.stocks = stocks
+            }
         }
     }
     

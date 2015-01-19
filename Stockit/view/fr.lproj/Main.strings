@@ -1,0 +1,45 @@
+
+/* Class = "IBUITextField"; placeholder = "Enter Portfolio Name..."; ObjectID = "7iq-8h-74s"; */
+"7iq-8h-74s.placeholder" = "Enter Portfolio Name...";
+
+/* Class = "IBUILabel"; text = "High"; ObjectID = "9Ol-7b-zfA"; */
+"9Ol-7b-zfA.text" = "High";
+
+/* Class = "IBUILabel"; text = "Low"; ObjectID = "Phs-Na-I0e"; */
+"Phs-Na-I0e.text" = "Low";
+
+/* Class = "IBUILabel"; text = "Google Inc"; ObjectID = "QH9-lq-mdj"; */
+"QH9-lq-mdj.text" = "Google Inc";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "SE2-id-QzY"; */
+"SE2-id-QzY.text" = "Label";
+
+/* Class = "IBUINavigationItem"; title = "Portfolios"; ObjectID = "U7t-Fv-SQ4"; */
+"U7t-Fv-SQ4.title" = "Portfolios";
+
+/* Class = "IBUILabel"; text = "Goog"; ObjectID = "Wex-Ip-qce"; */
+"Wex-Ip-qce.text" = "Goog";
+
+/* Class = "IBUIButton"; normalTitle = "Add Stocks to Portfolio"; ObjectID = "Z1R-va-DR8"; */
+"Z1R-va-DR8.normalTitle" = "Add Stocks to Portfolio";
+
+/* Class = "IBUINavigationItem"; title = "Add Portfolio"; ObjectID = "abG-1q-qtF"; */
+"abG-1q-qtF.title" = "Add Portfolio";
+
+/* Class = "IBUIButton"; normalTitle = "Add"; ObjectID = "bfu-KW-u53"; */
+"bfu-KW-u53.normalTitle" = "Add";
+
+/* Class = "IBUILabel"; text = "Hello"; ObjectID = "gCU-Mr-rlG"; */
+"gCU-Mr-rlG.text" = "Hello";
+
+/* Class = "IBUILabel"; text = "Nasdaq"; ObjectID = "gt9-7f-XmU"; */
+"gt9-7f-XmU.text" = "Nasdaq";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "lks-5S-8sh"; */
+"lks-5S-8sh.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "oyT-tC-yTq"; */
+"oyT-tC-yTq.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "zf2-fS-Juz"; */
+"zf2-fS-Juz.text" = "Label";

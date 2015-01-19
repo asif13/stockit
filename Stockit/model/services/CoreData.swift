@@ -32,6 +32,7 @@ class CoreDataOps {
         newStock.low = low
         newStock.high = high
         newStock.current = current
+        newStock.exchange=exchange
         var portfolio = portfolioAdapter.getPortfolioDetail(portfolioName)
         newStock.portfolio = portfolio
         stockAdapter.insertStock()
@@ -41,7 +42,6 @@ class CoreDataOps {
     
         var stockArray = [Stock]()
         var portfolio = portfolioAdapter.getPortfolioDetail(portfolioName)
-        
         if portfolio != nil {
             for i in portfolio.stocks{
                 stockArray.append(i as Stock)
