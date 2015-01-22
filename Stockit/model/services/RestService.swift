@@ -30,7 +30,7 @@ class RestService{
         return js1["Result"] as NSArray
     }
     
-    func getStockData(stockId:String){
+    func getStockData(stockId:String) -> [String: [String]]{
         var urlString:String = Constants.STOCK_DATA_URL.stringByReplacingOccurrencesOfString("s=GOOG", withString: "s=\(stockId)")
         println(urlString)
         var url = NSURL(string: urlString)
@@ -39,7 +39,9 @@ class RestService{
         var error : NSError?
         var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
         var resstr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-        println(resstr)
+        var stockData = CSV(csvData: resstr!, error: nil)
+        var stockDict = ["cost":(stockData?.columns["Adj Close"])!, "date":(stockData?.columns["Date"])!]
+        return stockDict
         
         
     }

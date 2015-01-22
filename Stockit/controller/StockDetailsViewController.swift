@@ -22,7 +22,8 @@ class StockDetailsViewController: UIViewController {
 //        onClickBehind.cancelsTouchesInView = false
 //        self.view.addGestureRecognizer(onClickBehind)
         
-        RestService().getStockData(stockId!)
+        var stockData = RestService().getStockData(stockId!)
+        println(stockData)
         // Do any additional setup after loading the view.
     }
     
