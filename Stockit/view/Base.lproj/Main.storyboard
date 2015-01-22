@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uiG-eT-3gY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uiG-eT-3gY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -53,7 +53,7 @@
                                                     <outlet property="stockExchLabel" destination="bdK-fO-KKc" id="ZqD-I8-Y9c"/>
                                                     <outlet property="stockPriceLabel" destination="A8k-MX-2gq" id="DeD-Rw-kJj"/>
                                                     <outlet property="stockSymbolLabel" destination="cWh-l4-22A" id="PZu-rM-9g9"/>
-                                                    <segue destination="ltM-ib-Hxc" kind="presentation" id="AT2-02-znN"/>
+                                                    <segue destination="ltM-ib-Hxc" kind="presentation" identifier="stockDataSegue" id="AT2-02-znN"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keT-mP-Sdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9955" y="-4451"/>
+            <point key="canvasLocation" x="-10062" y="-4494"/>
         </scene>
         <!--Portfolios-->
         <scene sceneID="xVk-Ot-ksu">
@@ -165,7 +165,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCP-Je-yVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9361" y="-5168"/>
+            <point key="canvasLocation" x="-9368" y="-5281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ef9-KP-FgV">
@@ -181,7 +181,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dof-2L-26w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10062" y="-5163"/>
+            <point key="canvasLocation" x="-10068" y="-5281"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="6Po-uC-ufP">
@@ -255,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6i-s3-bZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9448" y="-4549"/>
+            <point key="canvasLocation" x="-8772" y="-5281"/>
         </scene>
         <!--Stock Details View Controller-->
         <scene sceneID="G56-8l-gFe">
@@ -293,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UpT-Gb-lVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8803" y="-4473"/>
+            <point key="canvasLocation" x="-9277" y="-4494"/>
         </scene>
         <!--Add Stock View Controller-->
         <scene sceneID="dDc-D3-tHY">
@@ -371,10 +371,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCS-26-WfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9480" y="-4035"/>
+            <point key="canvasLocation" x="-10062" y="-3795"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tjF-A2-Qup"/>
+        <segue reference="Idc-Ui-g9a"/>
     </inferredMetricsTieBreakers>
 </document>

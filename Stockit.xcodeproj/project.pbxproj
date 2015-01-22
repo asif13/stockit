@@ -36,6 +36,7 @@
 		25898D831A57B62400FFF2DD /* PortfoliosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D681A57B62400FFF2DD /* PortfoliosTableViewCell.swift */; };
 		25898D841A57B62400FFF2DD /* staticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D691A57B62400FFF2DD /* staticTableViewCell.swift */; };
 		25898D851A57B62400FFF2DD /* StockSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */; };
+		259955A41A70AF5300C89332 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259955A31A70AF5300C89332 /* CSV.swift */; };
 		259975F41A599B7500A40279 /* stockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259975F31A599B7500A40279 /* stockData.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		25898D691A57B62400FFF2DD /* staticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = staticTableViewCell.swift; sourceTree = "<group>"; };
 		25898D6A1A57B62400FFF2DD /* StockSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockSearchTableViewCell.swift; sourceTree = "<group>"; };
 		25898D861A57BAAF00FFF2DD /* Stockit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stockit-Bridging-Header.h"; sourceTree = "<group>"; };
+		259955A31A70AF5300C89332 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		259975F31A599B7500A40279 /* stockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +261,7 @@
 				25898D5E1A57B62400FFF2DD /* CommonFunc.swift */,
 				25898D5F1A57B62400FFF2DD /* CoreData.swift */,
 				25898D601A57B62400FFF2DD /* RestService.swift */,
+				259955A31A70AF5300C89332 /* CSV.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				259975F41A599B7500A40279 /* stockData.swift in Sources */,
 				25898D7B1A57B62400FFF2DD /* Portfolio.swift in Sources */,
 				25898D801A57B62400FFF2DD /* Constants.swift in Sources */,
+				259955A41A70AF5300C89332 /* CSV.swift in Sources */,
 				25898D831A57B62400FFF2DD /* PortfoliosTableViewCell.swift in Sources */,
 				25898D701A57B62400FFF2DD /* StockDetailsViewController.swift in Sources */,
 				25898D6C1A57B62400FFF2DD /* AddPortfolioViewController.swift in Sources */,

@@ -12,13 +12,17 @@ class StockDetailsViewController: UIViewController {
     var lable="";
     @IBOutlet weak var lable1: UILabel!
     @IBOutlet weak var navigation: UINavigationItem!
+    var stockId:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var onClickBehind = UITapGestureRecognizer(target: self, action: "tapBehind:")
-        onClickBehind.numberOfTapsRequired = 1
-        onClickBehind.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(onClickBehind)
+        println(stockId!)
+//        var onClickBehind = UITapGestureRecognizer(target: self, action: "tapBehind:")
+//        onClickBehind.numberOfTapsRequired = 1
+//        onClickBehind.cancelsTouchesInView = false
+//        self.view.addGestureRecognizer(onClickBehind)
+        
+        RestService().getStockData(stockId!)
         // Do any additional setup after loading the view.
     }
     
@@ -33,9 +37,9 @@ class StockDetailsViewController: UIViewController {
         
     }
     
-    @IBAction func tapBehind(sender:AnyObject){
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+//    @IBAction func tapBehind(sender:AnyObject){
+//        self.dismissViewControllerAnimated(true, completion: nil)
+//    }
     /*
     // MARK: - Navigation
     

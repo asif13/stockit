@@ -52,9 +52,8 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var stockId = displayStockList[indexPath.row].name
+        var stockId = displayStockList[indexPath.row].symbol
         var name = displayStockList[indexPath.row].name
-        println(displayStockList[indexPath.row].name)
         var low = "$223.54"
         var high = "$230"
         var current = "$228.45"
@@ -82,7 +81,8 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
                 var stk = stock as NSDictionary
                 var stockName = stk["name"] as String
                 var stockExch = stk["exch"] as String
-                displayStockList.append(stockData(name: stockName, exch: stockExch))
+                var stockSym = stk["symbol"] as String
+                displayStockList.append(stockData(name: stockName, exch: stockExch, symbol:stockSym))
             }
         }
             
@@ -93,7 +93,8 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
                 var stk = stock as NSDictionary
                 var stockName = stk["name"] as String
                 var stockExch = stk["exch"] as String
-                displayStockList.append(stockData(name: stockName, exch: stockExch))
+                var stockSym = stk["symbol"] as String
+                displayStockList.append(stockData(name: stockName, exch: stockExch, symbol:stockSym))
             }
         }
         stockListTableView.reloadData()

@@ -102,6 +102,12 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
             Details.portfolio = detailforportfolio
             Details.delegate = self;
         }
+        else if segue.identifier == "stockDataSegue"{
+            var stockDataVC = segue.destinationViewController as StockDetailsViewController
+            var selectedRow = self.tableView.indexPathForSelectedRow()!.row
+            stockDataVC.stockId = stocks[selectedRow].stockId
+            
+        }
 
     }
     func refreshStocks(yes: Bool) {

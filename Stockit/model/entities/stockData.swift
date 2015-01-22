@@ -11,9 +11,11 @@ import Foundation
 class stockData{
     var name:String
     var exch:String
+    var symbol:String
     
-    init(name:String, exch:String){
+    init(name:String, exch:String, symbol:String){
         self.name = name
         self.exch = exch
+        self.symbol = symbol
     }
 }
