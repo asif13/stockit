@@ -64,7 +64,6 @@ class CSV {
             let column = self.rows.map { row in row[header]! }
             columns[header] = column
         }
-        
         return columns
     }
 }

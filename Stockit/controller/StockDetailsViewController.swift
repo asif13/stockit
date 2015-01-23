@@ -8,8 +8,8 @@
 
 import UIKit
 
-class StockDetailsViewController: UIViewController {
-    var lable="";
+class StockDetailsViewController: UIViewController, LineGraphDataSource {
+    var lable=""
     @IBOutlet weak var lable1: UILabel!
     @IBOutlet weak var navigation: UINavigationItem!
     var stockId:String?
@@ -23,7 +23,19 @@ class StockDetailsViewController: UIViewController {
 //        self.view.addGestureRecognizer(onClickBehind)
         
         var stockData = RestService().getStockData(stockId!)
-        println(stockData)
+        var stockPrices : [Array<CGFloat>] = []
+        var stockP: Array<CGFloat> = []
+        for i in stockData["cost"]!{
+            var j = CGFloat((i as NSString).floatValue)
+            stockP.append(j)
+        }
+        stockPrices.append(stockP)
+        var bounds = CGRect(x: 20, y: 20, width: 400, height: 400)
+        var lineGraph = LineGraph(frame: bounds)
+        lineGraph.dataSource = self
+        lineGraph.initLineGraph(stockPrices, xAxislabelArray: stockData["cost"]!, yAxislabelArray: stockData["date"]!, gridVisible: true)
+        lineGraph.displayLineGraph()
+        self.view.addSubview(lineGraph)
         // Do any additional setup after loading the view.
     }
     
