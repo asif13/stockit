@@ -36,6 +36,18 @@ class CommonFunc: NSObject {
         return Static.instance!
     }
     
+    class var sharedInstanceStockHistory : StockHistoryAdapter {
+        struct Static {
+            static var onceToken : dispatch_once_t = 0
+            static var instance : StockHistoryAdapter? = nil
+        }
+        dispatch_once(&Static.onceToken) {
+            Static.instance = StockHistoryAdapter()
+        }
+        
+        return Static.instance!
+    }
+    
     class func _readLocalJson(fileName:String) -> AnyObject {
         var filePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "json") as String?
         var raw:NSData? = NSData.dataWithContentsOfMappedFile(filePath!) as NSData?

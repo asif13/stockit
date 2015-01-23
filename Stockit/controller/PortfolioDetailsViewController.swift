@@ -45,7 +45,6 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
                     for i in stks {
                         stocks.append(i)
                     }
-                    println(stocks)
                 }
             }
 
@@ -86,7 +85,6 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("stockCell", forIndexPath: indexPath) as StockTableViewCell
-        println(indexPath.row)
         cell.stockSymbolLabel.text = stocks[indexPath.row].name;
         cell.stockExchLabel.text=stocks[indexPath.row].exchange;
         cell.stockPriceLabel.text=stocks[indexPath.row].current;
@@ -118,7 +116,6 @@ class PortfolioDetailsViewController: UIViewController, UITableViewDelegate, UIT
             for i in stks {
                 stocks.append(i)
             }
-            println(stocks)
         }
         tableView.reloadData()
 

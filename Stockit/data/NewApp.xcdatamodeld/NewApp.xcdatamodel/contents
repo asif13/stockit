@@ -13,8 +13,13 @@
         <attribute name="stockId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="portfolio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Portfolio" inverseName="stocks" inverseEntity="Portfolio" syncable="YES"/>
     </entity>
+    <entity name="StockHistory" syncable="YES">
+        <attribute name="stockData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stockId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Portfolio" positionX="-54" positionY="27" width="128" height="73"/>
         <element name="Stock" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="StockHistory" positionX="-45" positionY="54" width="128" height="75"/>
     </elements>
 </model>

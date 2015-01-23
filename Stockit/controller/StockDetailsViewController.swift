@@ -13,27 +13,49 @@ class StockDetailsViewController: UIViewController, LineGraphDataSource {
     @IBOutlet weak var lable1: UILabel!
     @IBOutlet weak var navigation: UINavigationItem!
     var stockId:String?
-    
+    var stockHistoryAdapter = CommonFunc.sharedInstanceStockHistory
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(stockId!)
 //        var onClickBehind = UITapGestureRecognizer(target: self, action: "tapBehind:")
 //        onClickBehind.numberOfTapsRequired = 1
 //        onClickBehind.cancelsTouchesInView = false
 //        self.view.addGestureRecognizer(onClickBehind)
         
-        var stockData = RestService().getStockData(stockId!)
-        var stockPrices : [Array<CGFloat>] = []
+        var stockHistData : StockHistory?  = stockHistoryAdapter.getStockDetail(stockId!)
         var stockP: Array<CGFloat> = []
-        for i in stockData["cost"]!{
-            var j = CGFloat((i as NSString).floatValue)
-            stockP.append(j)
+        var stockPrices : [Array<CGFloat>] = []
+        var xaxislabel : [String] = []
+        var yaxislabel: [String] = []
+        if stockHistData == nil {
+            var stockData = RestService().getStockData(stockId!)
+            for i in stockData["cost"]!{
+                var j = CGFloat((i as NSString).floatValue)
+                stockP.append(j)
+            }
+            stockPrices.append(stockP)
+            xaxislabel = stockData["cost"]!
+            yaxislabel = stockData["date"]!
+            
+            
         }
-        stockPrices.append(stockP)
-        var bounds = CGRect(x: 20, y: 20, width: 400, height: 400)
+        
+        else{
+            var stockP: Array<CGFloat> = []
+            var stockData = CSV(csvData: (stockHistData?.stockData)!, error: nil)
+            var stockDict = ["cost":(stockData?.columns["Adj Close"])!, "date":(stockData?.columns["Date"])!]
+            for i in stockDict["cost"]!{
+                var j = CGFloat((i as NSString).floatValue)
+                stockP.append(j)
+            }
+            stockPrices.append(stockP)
+            xaxislabel = stockDict["cost"]!
+            yaxislabel = stockDict["date"]!
+        }
+        
+        var bounds = CGRect(x: 40, y: 40, width: 700, height: 600)
         var lineGraph = LineGraph(frame: bounds)
         lineGraph.dataSource = self
-        lineGraph.initLineGraph(stockPrices, xAxislabelArray: stockData["cost"]!, yAxislabelArray: stockData["date"]!, gridVisible: true)
+        lineGraph.initLineGraph(stockPrices, xAxislabelArray: xaxislabel, yAxislabelArray: yaxislabel, gridVisible: true)
         lineGraph.displayLineGraph()
         self.view.addSubview(lineGraph)
         // Do any additional setup after loading the view.

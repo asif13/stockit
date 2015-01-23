@@ -58,7 +58,6 @@ class AddStockViewController: UIViewController, UISearchBarDelegate, UITableView
         var high = "$230"
         var current = "$228.45"
         var exchange = displayStockList[indexPath.row].exch
-        println(portfolio)
         CoreDataOps().addStockToPortfolio(portfolio, stockId: stockId, name: name, low: low, high: high, current: current, exchange: exchange)
         self.dismissViewControllerAnimated(true , completion: { () -> Void in
             self.delegate?.refreshStocks(true)

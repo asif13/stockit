@@ -16,6 +16,7 @@ class CoreDataOps {
     var portfolios:NSArray = NSArray()
     let stockAdapter = CommonFunc.sharedInstanceStock
     let portfolioAdapter = CommonFunc.sharedInstancePortfolio
+    let stockHistoryAdapter = CommonFunc.sharedInstanceStockHistory
     
     
     func addPortfolio(name:String) {
@@ -60,6 +61,14 @@ class CoreDataOps {
             return portfolio
         }
         return []
+    }
+    
+    func addStockHistory(stockId:String, stockHistory:String){
+        
+        var newStock = stockHistoryAdapter.addStock()
+        newStock.stockId = stockId
+        newStock.stockData = stockHistory
+        stockAdapter.insertStock()
     }
 }
 

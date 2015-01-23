@@ -75,7 +75,6 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
 
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-         println("hello")
     }
     /*
     // Override to support conditional editing of the table view.
@@ -213,14 +212,12 @@ class PortfoliosTableViewController: UITableViewController, AddPortfolioViewCont
             var stks = CoreDataOps().getAllStocksForPortfolio(cell.lable.text as String!)
             var stocks:[Stock] = [Stock]()
             stocks.removeAll()
-            println(displayData[selectedRow])
             PortfolioDetail.detailforportfolio = displayData[selectedRow]
             if stks.count > 0 {
                 for i in stks {
                     stocks.append(i)
                 }
                 
-                println(stocks)
                 PortfolioDetail.stocks = stocks
             }
         }

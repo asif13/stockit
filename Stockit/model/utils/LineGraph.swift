@@ -239,7 +239,6 @@ public class LineGraph: UIView {
             {
                 if value < 0
                 {
-                    println("LineGraph : dataArray has negeative values")
                     dataArrayHasNegeativeValues = true
                 }
             }
