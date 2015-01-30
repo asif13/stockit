@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2527AF951A727422001777C1 /* StockHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2527AF941A727422001777C1 /* StockHistory.swift */; };
 		2527AF971A727474001777C1 /* StockHistoryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2527AF961A727474001777C1 /* StockHistoryAdapter.swift */; };
+		2527AFCC1A738E1B001777C1 /* splitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2527AFCB1A738E1B001777C1 /* splitViewController.swift */; };
+		2527AFCE1A73951E001777C1 /* CompareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2527AFCD1A73951E001777C1 /* CompareTableViewController.swift */; };
+		2527AFD01A7395FA001777C1 /* compareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2527AFCF1A7395FA001777C1 /* compareTableViewCell.swift */; };
 		2536DFE31A594DDB0010FAA3 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2536DFE21A594DDB0010FAA3 /* StockTableViewCell.swift */; };
 		25898D371A57B50000FFF2DD /* StockitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D361A57B50000FFF2DD /* StockitTests.swift */; };
 		25898D6B1A57B62400FFF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25898D411A57B62400FFF2DD /* AppDelegate.swift */; };
@@ -42,6 +45,9 @@
 		259955A71A70E4F200C89332 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259955A51A70E4F200C89332 /* LineGraph.swift */; };
 		259955A81A70E4F200C89332 /* LineDotLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259955A61A70E4F200C89332 /* LineDotLayer.swift */; };
 		259975F41A599B7500A40279 /* stockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259975F31A599B7500A40279 /* stockData.swift */; };
+		BE50CDC21A7A0FAB00D29A0C /* comparesecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50CDC11A7A0FAB00D29A0C /* comparesecondTableViewCell.swift */; };
+		BEBAB6671A78C7D5004F9ACE /* CompareEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBAB6661A78C7D5004F9ACE /* CompareEntriesViewController.swift */; };
+		BEBAB6691A78C969004F9ACE /* comparefirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBAB6681A78C969004F9ACE /* comparefirstTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,9 @@
 /* Begin PBXFileReference section */
 		2527AF941A727422001777C1 /* StockHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockHistory.swift; sourceTree = "<group>"; };
 		2527AF961A727474001777C1 /* StockHistoryAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockHistoryAdapter.swift; sourceTree = "<group>"; };
+		2527AFCB1A738E1B001777C1 /* splitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = splitViewController.swift; path = ../../splitViewController.swift; sourceTree = "<group>"; };
+		2527AFCD1A73951E001777C1 /* CompareTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompareTableViewController.swift; path = ../../CompareTableViewController.swift; sourceTree = "<group>"; };
+		2527AFCF1A7395FA001777C1 /* compareTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = compareTableViewCell.swift; path = ../../compareTableViewCell.swift; sourceTree = "<group>"; };
 		2536DFE21A594DDB0010FAA3 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		25898D181A57B50000FFF2DD /* Stockit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25898D1C1A57B50000FFF2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +105,9 @@
 		259955A51A70E4F200C89332 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 		259955A61A70E4F200C89332 /* LineDotLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDotLayer.swift; sourceTree = "<group>"; };
 		259975F31A599B7500A40279 /* stockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stockData.swift; sourceTree = "<group>"; };
+		BE50CDC11A7A0FAB00D29A0C /* comparesecondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = comparesecondTableViewCell.swift; path = ../../comparesecondTableViewCell.swift; sourceTree = "<group>"; };
+		BEBAB6661A78C7D5004F9ACE /* CompareEntriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompareEntriesViewController.swift; path = ../../CompareEntriesViewController.swift; sourceTree = "<group>"; };
+		BEBAB6681A78C969004F9ACE /* comparefirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = comparefirstTableViewCell.swift; path = ../../comparefirstTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +206,12 @@
 		25898D431A57B62400FFF2DD /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE50CDC11A7A0FAB00D29A0C /* comparesecondTableViewCell.swift */,
+				BEBAB6681A78C969004F9ACE /* comparefirstTableViewCell.swift */,
+				BEBAB6661A78C7D5004F9ACE /* CompareEntriesViewController.swift */,
+				2527AFCF1A7395FA001777C1 /* compareTableViewCell.swift */,
+				2527AFCD1A73951E001777C1 /* CompareTableViewController.swift */,
+				2527AFCB1A738E1B001777C1 /* splitViewController.swift */,
 				25898D441A57B62400FFF2DD /* AddPortfolioViewController.swift */,
 				25898D451A57B62400FFF2DD /* AddStockViewController.swift */,
 				25898D461A57B62400FFF2DD /* PortfolioDetailsViewController.swift */,
@@ -403,7 +421,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBAB6671A78C7D5004F9ACE /* CompareEntriesViewController.swift in Sources */,
 				259975F41A599B7500A40279 /* stockData.swift in Sources */,
+				2527AFD01A7395FA001777C1 /* compareTableViewCell.swift in Sources */,
 				25898D7B1A57B62400FFF2DD /* Portfolio.swift in Sources */,
 				25898D801A57B62400FFF2DD /* Constants.swift in Sources */,
 				259955A41A70AF5300C89332 /* CSV.swift in Sources */,
@@ -413,11 +433,15 @@
 				2527AF951A727422001777C1 /* StockHistory.swift in Sources */,
 				25898D6C1A57B62400FFF2DD /* AddPortfolioViewController.swift in Sources */,
 				25898D761A57B62400FFF2DD /* Reachability.m in Sources */,
+				BEBAB6691A78C969004F9ACE /* comparefirstTableViewCell.swift in Sources */,
+				2527AFCE1A73951E001777C1 /* CompareTableViewController.swift in Sources */,
 				25898D841A57B62400FFF2DD /* staticTableViewCell.swift in Sources */,
+				BE50CDC21A7A0FAB00D29A0C /* comparesecondTableViewCell.swift in Sources */,
 				2536DFE31A594DDB0010FAA3 /* StockTableViewCell.swift in Sources */,
 				25898D7E1A57B62400FFF2DD /* CoreData.swift in Sources */,
 				25898D7C1A57B62400FFF2DD /* Stock.swift in Sources */,
 				25898D6F1A57B62400FFF2DD /* PortfoliosTableViewController.swift in Sources */,
+				2527AFCC1A738E1B001777C1 /* splitViewController.swift in Sources */,
 				25898D791A57B62400FFF2DD /* PortfolioAdapter.swift in Sources */,
 				25898D6B1A57B62400FFF2DD /* AppDelegate.swift in Sources */,
 				259955A81A70E4F200C89332 /* LineDotLayer.swift in Sources */,

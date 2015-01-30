@@ -68,6 +68,7 @@ class CoreDataOps {
         var newStock = stockHistoryAdapter.addStock()
         newStock.stockId = stockId
         newStock.stockData = stockHistory
+        println(newStock.valueForKey("stockData"))
         stockAdapter.insertStock()
     }
 }

@@ -1,18 +1,16 @@
 //
-//  StockTableViewCell.swift
+//  compareTableViewCell.swift
 //  Stockit
 //
-//  Created by Nitesh Agarwal on 04/01/15.
+//  Created by Nitesh Agarwal on 24/01/15.
 //  Copyright (c) 2015 erudite. All rights reserved.
 //
 
 import UIKit
 
-class StockTableViewCell: UITableViewCell {
+class compareTableViewCell: UITableViewCell {
 
-    @IBOutlet var stockSymbolLabel: UILabel!
-    @IBOutlet var stockExchLabel: UILabel!
-    @IBOutlet var stockPriceLabel: UILabel!
+    @IBOutlet var comparelabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -21,12 +21,12 @@ class StockDetailsViewController: UIViewController, LineGraphDataSource {
 //        onClickBehind.cancelsTouchesInView = false
 //        self.view.addGestureRecognizer(onClickBehind)
         
-        var stockHistData : StockHistory?  = stockHistoryAdapter.getStockDetail(stockId!)
+        //var stockHistData : StockHistory?  = stockHistoryAdapter.getStockDetail(stockId!)
         var stockP: Array<CGFloat> = []
         var stockPrices : [Array<CGFloat>] = []
         var xaxislabel : [String] = []
         var yaxislabel: [String] = []
-        if stockHistData == nil {
+//        if stockHistData == nil {
             var stockData = RestService().getStockData(stockId!)
             for i in stockData["cost"]!{
                 var j = CGFloat((i as NSString).floatValue)
@@ -37,20 +37,20 @@ class StockDetailsViewController: UIViewController, LineGraphDataSource {
             yaxislabel = stockData["date"]!
             
             
-        }
-        
-        else{
-            var stockP: Array<CGFloat> = []
-            var stockData = CSV(csvData: (stockHistData?.stockData)!, error: nil)
-            var stockDict = ["cost":(stockData?.columns["Adj Close"])!, "date":(stockData?.columns["Date"])!]
-            for i in stockDict["cost"]!{
-                var j = CGFloat((i as NSString).floatValue)
-                stockP.append(j)
-            }
-            stockPrices.append(stockP)
-            xaxislabel = stockDict["cost"]!
-            yaxislabel = stockDict["date"]!
-        }
+//        }
+//        
+//        else{
+//            var stockP: Array<CGFloat> = []
+//            var stockData = CSV(csvData: (stockHistData?.stockData)!, error: nil)
+//            var stockDict = ["cost":(stockData?.columns["Adj Close"])!, "date":(stockData?.columns["Date"])!]
+//            for i in stockDict["cost"]!{
+//                var j = CGFloat((i as NSString).floatValue)
+//                stockP.append(j)
+//            }
+//            stockPrices.append(stockP)
+//            xaxislabel = stockDict["cost"]!
+//            yaxislabel = stockDict["date"]!
+//        }
         
         var bounds = CGRect(x: 40, y: 40, width: 700, height: 600)
         var lineGraph = LineGraph(frame: bounds)

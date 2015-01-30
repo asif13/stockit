@@ -50,7 +50,6 @@ class PortfolioAdapter :BaseAdapter {
         return nil
         
     }
-    
     func cleanPortfolioTable() {
         var allPortfolio:[Portfolio]! = self.getAllPortfolios()
         

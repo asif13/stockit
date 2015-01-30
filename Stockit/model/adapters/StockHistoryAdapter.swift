@@ -32,7 +32,8 @@ class StockHistoryAdapter :BaseAdapter {
         fetchRequest.predicate = compound
         var syncDatas = managedObjectContext?.executeFetchRequest(fetchRequest, error: nil) as NSArray?
         if syncDatas?.count > 0 {
-            return syncDatas?.lastObject as StockHistory
+            var syncData = syncDatas?[0] as StockHistory
+            println(syncData)
         }
         return nil
     }
